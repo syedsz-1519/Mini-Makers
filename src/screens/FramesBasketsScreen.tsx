@@ -26,7 +26,7 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
   const accessories = PRODUCTS.filter((p) => p.category === 'accessories');
 
   return (
-    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Header */}
       <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
         <div className="max-w-7xl mx-auto">

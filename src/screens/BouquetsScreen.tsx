@@ -41,7 +41,7 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
       : bouquetProducts.filter((p) => p.subCategory === selectedFilter);
 
   return (
-    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Header with Breadcrumb & Title */}
       <section className="py-6 sm:py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/40">
         <div className="max-w-7xl mx-auto">

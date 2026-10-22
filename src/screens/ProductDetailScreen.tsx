@@ -109,7 +109,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
   ).slice(0, 3);
 
   return (
-    <div className="w-full pb-24 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30]">
       {/* Top Breadcrumb & Back bar */}
       <div className="py-4 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-white">
         <div className="max-w-7xl mx-auto flex items-center justify-between">

@@ -37,6 +37,8 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'gift-boxes', label: 'Gift Boxes' },
     { id: 'frames-baskets', label: 'Frames & Baskets' },
     { id: 'how-to-order', label: 'How to Order' },
+    { id: 'about', label: 'About' },
+    { id: 'contact', label: 'Contact' },
     { id: 'reviews', label: 'Reviews' },
     { id: 'custom-order', label: 'Custom Request' },
   ];
@@ -73,13 +75,13 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main Nav Bar */}
-      <div className="px-3 sm:px-6 lg:px-8 py-3 bg-[#FFF8F3]/95 backdrop-blur-md border-b border-[#F4B6C6]/40 text-[#3A2A30]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+      <div className="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 bg-[#FFF8F3]/95 backdrop-blur-md border-b border-[#F4B6C6]/40 text-[#3A2A30]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
           
           {/* Brand Logo & Name (Always Visible) */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2.5 sm:gap-3 text-left group shrink-0 min-h-[44px] focus:outline-none"
+            className="flex items-center gap-2 sm:gap-3 text-left group shrink-0 min-h-[44px] focus:outline-none"
             aria-label="Mini Makers Home"
           >
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden p-0.5 border-2 border-[#F4B6C6] bg-white shadow-xs transition-transform duration-300 group-hover:scale-105 flex items-center justify-center shrink-0">
@@ -101,9 +103,9 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </button>
 
-          {/* Desktop Nav Links (Visible only on screens 900px and up) */}
+          {/* Desktop Nav Links (Visible only on screens 1024px and up for generous spacing) */}
           <nav
-            className="hidden min-[900px]:flex items-center gap-1 text-sm font-medium"
+            className="hidden min-[1024px]:flex items-center gap-0.5 xl:gap-1 text-sm font-medium flex-wrap justify-center"
             aria-label="Main Navigation"
           >
             {navLinks.map((link) => {
@@ -112,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`px-3 py-1.5 rounded-full transition-all whitespace-nowrap text-xs uppercase tracking-wider font-medium min-h-[44px] flex items-center justify-center ${
+                  className={`px-2.5 xl:px-3 py-1.5 rounded-full transition-all whitespace-nowrap text-[11px] xl:text-xs uppercase tracking-wider font-medium min-h-[44px] flex items-center justify-center ${
                     isActive
                       ? 'bg-[#B03A63] text-white shadow-xs font-semibold'
                       : 'text-[#3A2A30]/85 hover:text-[#B03A63] hover:bg-[#FBE4EA]/80'
@@ -151,22 +153,22 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </button>
 
-            {/* Direct WhatsApp CTA Button (Desktop only: 900px+; mobile goes inside drawer) */}
+            {/* Direct WhatsApp CTA Button (Desktop only) */}
             <a
               href={BRAND.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Order on WhatsApp 0341-4655335"
-              className="hidden min-[900px]:inline-flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold tracking-wide uppercase transition-all bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs hover:shadow-sm"
+              className="hidden min-[1024px]:inline-flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold tracking-wide uppercase transition-all bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs hover:shadow-sm"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Order Now</span>
             </a>
 
-            {/* Hamburger Button (Visible on screens below 900px) */}
+            {/* Hamburger Button (Visible on screens below 1024px) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="min-[900px]:hidden w-11 h-11 rounded-full border border-[#F4B6C6] flex items-center justify-center text-[#3A2A30] hover:bg-[#FBE4EA] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B03A63]"
+              className="min-[1024px]:hidden w-11 h-11 rounded-full border border-[#F4B6C6] flex items-center justify-center text-[#3A2A30] hover:bg-[#FBE4EA] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B03A63]"
               aria-label="Open Navigation Menu"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
@@ -177,11 +179,11 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Slide-in Mobile Drawer for screens below 900px (Slides in from Right) */}
+      {/* Slide-in Mobile Drawer (Slides in from Right) */}
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-drawer"
-          className="fixed inset-0 z-50 min-[900px]:hidden"
+          className="fixed inset-0 z-50 min-[1024px]:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Drawer"
@@ -228,14 +230,14 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* Drawer Navigation Links */}
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1.5">
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1">
               {navLinks.map((link) => {
                 const isActive = currentScreen === link.id;
                 return (
                   <button
                     key={link.id}
                     onClick={() => handleNavClick(link.id)}
-                    className={`w-full text-left px-4 py-3 min-h-[44px] rounded-xl text-sm font-medium transition-all flex items-center justify-between ${
+                    className={`w-full text-left px-4 py-2.5 min-h-[44px] rounded-xl text-sm font-medium transition-all flex items-center justify-between ${
                       isActive
                         ? 'bg-[#B03A63] text-white font-semibold shadow-xs'
                         : 'text-[#3A2A30] hover:bg-[#FBE4EA]'
@@ -274,22 +276,22 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <div className="grid grid-cols-2 gap-2 pt-1">
+                <button
+                  onClick={() => handleNavClick('contact')}
+                  className="py-2.5 min-h-[44px] rounded-lg border border-[#F4B6C6] bg-[#FFF8F3] text-[#B03A63] text-xs font-semibold flex items-center justify-center gap-1.5"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Contact Page</span>
+                </button>
+
                 <a
                   href={BRAND.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-2.5 min-h-[44px] rounded-lg border border-[#F4B6C6] bg-[#FFF8F3] text-[#B03A63] text-xs font-semibold flex items-center justify-center gap-1.5"
-                >
-                  <Instagram className="w-3.5 h-3.5" />
-                  <span>Instagram</span>
-                </a>
-
-                <a
-                  href={BRAND.phoneCall}
                   className="py-2.5 min-h-[44px] rounded-lg border border-[#F4B6C6] bg-[#FFF8F3] text-[#3A2A30] text-xs font-semibold flex items-center justify-center gap-1.5"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#B03A63]" />
-                  <span>Call Us</span>
+                  <Instagram className="w-3.5 h-3.5 text-[#B03A63]" />
+                  <span>Instagram</span>
                 </a>
               </div>
             </div>

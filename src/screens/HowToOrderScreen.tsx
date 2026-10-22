@@ -26,7 +26,7 @@ export const HowToOrderScreen: React.FC<HowToOrderScreenProps> = ({
   const icons = [Search, Camera, FileText, CreditCard, CheckCircle, Truck];
 
   return (
-    <div className="w-full pb-24 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30]">
       {/* Header */}
       <section className="py-12 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
         <div className="max-w-7xl mx-auto text-center max-w-3xl">

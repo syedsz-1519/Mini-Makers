@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { FloatingActionButtons } from './components/FloatingActionButtons';
@@ -18,13 +18,39 @@ import { ProductDetailScreen } from './screens/ProductDetailScreen';
 import { HowToOrderScreen } from './screens/HowToOrderScreen';
 import { ReviewsGalleryScreen } from './screens/ReviewsGalleryScreen';
 import { CustomOrderScreen } from './screens/CustomOrderScreen';
+import { AboutScreen } from './screens/AboutScreen';
+import { ContactScreen } from './screens/ContactScreen';
 import { PRODUCTS } from './data/catalog';
 import { Product, CustomOrderItem } from './types';
 
 export default function App() {
+  // Sync initial screen from URL path
+  const getInitialScreen = (): string => {
+    const path = window.location.pathname.replace(/^\//, '').toLowerCase();
+    if (path === 'about') return 'about';
+    if (path === 'contact') return 'contact';
+    if (path === 'bouquets') return 'bouquets';
+    if (path === 'wedding') return 'wedding';
+    if (path === 'gift-boxes') return 'gift-boxes';
+    if (path === 'frames-baskets') return 'frames-baskets';
+    if (path === 'how-to-order') return 'how-to-order';
+    if (path === 'reviews') return 'reviews';
+    if (path === 'custom-order') return 'custom-order';
+    return 'home';
+  };
+
   // Navigation state
-  const [currentScreen, setCurrentScreen] = useState<string>('home');
+  const [currentScreen, setCurrentScreen] = useState<string>(getInitialScreen);
   const [selectedProduct, setSelectedProduct] = useState<Product>(PRODUCTS[0]);
+
+  // Keep browser back/forward buttons working
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentScreen(getInitialScreen());
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   // Inquiry Cart state
   const [inquiryItems, setInquiryItems] = useState<CustomOrderItem[]>([
@@ -42,6 +68,10 @@ export default function App() {
 
   const handleNavigate = (screen: string) => {
     setCurrentScreen(screen);
+    const path = screen === 'home' ? '/' : `/${screen}`;
+    if (window.location.pathname !== path) {
+      window.history.pushState(null, '', path);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -67,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFF8F3] text-[#3A2A30] font-sans antialiased selection:bg-[#FBE4EA] selection:text-[#B03A63]">
+    <div className="min-h-[100dvh] flex flex-col flex-1 bg-[#FFF8F3] text-[#3A2A30] font-sans antialiased selection:bg-[#FBE4EA] selection:text-[#B03A63]">
       {/* Header */}
       <Header
         currentScreen={currentScreen}
@@ -83,6 +113,18 @@ export default function App() {
           <HomeScreen
             onNavigate={handleNavigate}
             onSelectProduct={handleSelectProduct}
+          />
+        )}
+
+        {currentScreen === 'about' && (
+          <AboutScreen
+            onNavigate={handleNavigate}
+          />
+        )}
+
+        {currentScreen === 'contact' && (
+          <ContactScreen
+            onNavigate={handleNavigate}
           />
         )}
 

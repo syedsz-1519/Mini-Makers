@@ -17,7 +17,10 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="border-t border-[#F4B6C6]/50 bg-[#FFF8F3] text-[#3A2A30] transition-colors pb-28 sm:pb-32">
+    <footer
+      className="border-t border-[#F4B6C6]/50 bg-[#FFF8F3] text-[#3A2A30] transition-colors mt-auto"
+      style={{ paddingBottom: 'calc(16px + env(safe-area-inset-bottom, 0px))' }}
+    >
       {/* Upper Inquiry Banner: Stacks vertically on mobile */}
       <div className="py-8 sm:py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -204,15 +207,40 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </ul>
             </div>
 
-            {/* How We Work */}
+            {/* How We Work & Brand Links */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest mb-3 text-[#B03A63]">
-                How We Work
+                Our Brand
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-[#3A2A30]/80">
                 <li>
                   <button
-                    onClick={() => onNavigate('how-to-order')}
+                    onClick={() => {
+                      onNavigate('about');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="hover:text-[#B03A63] transition-colors text-left"
+                  >
+                    About Mini Makers
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      onNavigate('contact');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="hover:text-[#B03A63] transition-colors text-left"
+                  >
+                    Contact &amp; Inquiries
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      onNavigate('how-to-order');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     className="hover:text-[#B03A63] transition-colors text-left"
                   >
                     6-Step Order Flow
@@ -220,7 +248,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </li>
                 <li>
                   <button
-                    onClick={() => onNavigate('reviews')}
+                    onClick={() => {
+                      onNavigate('reviews');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     className="hover:text-[#B03A63] transition-colors text-left"
                   >
                     WhatsApp Reviews
@@ -228,15 +259,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </li>
                 <li>
                   <button
-                    onClick={() => onNavigate('how-to-order')}
-                    className="hover:text-[#B03A63] transition-colors text-left"
-                  >
-                    JazzCash &amp; EasyPaisa
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => onNavigate('custom-order')}
+                    onClick={() => {
+                      onNavigate('custom-order');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     className="hover:text-[#B03A63] transition-colors text-left"
                   >
                     Express Dispatch
@@ -274,10 +300,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#3A2A30]/75 text-center sm:text-left">
-          <p>© {new Date().getFullYear()} Mini Makers. Crafted with Love, Made for Memories.</p>
-          <div className="flex items-center justify-center gap-1.5">
+        {/* Bottom Bar: pr-20 on mobile keeps the text completely clear of the 56px floating action buttons in the corner */}
+        <div className="mt-8 pt-5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-[#3A2A30]/75 text-center sm:text-left leading-relaxed pr-20 sm:pr-0">
+          <p className="max-w-[280px] xs:max-w-sm sm:max-w-none mx-auto sm:mx-0">
+            © {new Date().getFullYear()} Mini Makers. Crafted with Love, Made for Memories.
+          </p>
+          <div className="flex items-center justify-center gap-1.5 max-w-[280px] xs:max-w-sm sm:max-w-none mx-auto sm:mx-0">
             <span>Handmade with</span>
             <Heart className="w-3.5 h-3.5 text-[#B03A63] fill-[#B03A63] inline" />
             <span>in <strong>Lahore | Pattoki</strong>, Pakistan</span>

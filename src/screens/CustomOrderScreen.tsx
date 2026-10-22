@@ -208,7 +208,7 @@ export const CustomOrderScreen: React.FC<CustomOrderScreenProps> = ({
   };
 
   return (
-    <div className="w-full pb-28 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30]">
       {/* Header Banner */}
       <section className="py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
         <div className="max-w-4xl mx-auto text-center">

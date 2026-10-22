@@ -20,7 +20,7 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
   const weddingProducts = PRODUCTS.filter((p) => p.category === 'wedding');
 
   return (
-    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
+    <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Wedding Hero Banner */}
       <section className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-gradient-to-b from-[#FFF8F3] via-[#FBE4EA]/60 to-[#FFF8F3]">
         <div className="max-w-7xl mx-auto">
