@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'DM Sans', 'Poppins', system-ui, sans-serif;
+    --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFF8F3;
+    color: #3A2A30;
+  }
+
+  .font-urdu {
+    font-family: var(--font-urdu);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Boutique Soft Shadows */
+.boutique-shadow {
+  box-shadow: 0 8px 30px -4px rgba(176, 58, 99, 0.08), 0 2px 8px rgba(58, 42, 48, 0.03);
+}
+
+.boutique-shadow-lg {
+  box-shadow: 0 16px 40px -6px rgba(176, 58, 99, 0.14), 0 4px 14px rgba(58, 42, 48, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(176, 58, 99, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 58, 99, 0.45);
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Mini Makers — Crafted with Love, Made for Memories</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#fff0f4", "primary-fixed-dim": "#ffb1c7", "on-secondary-container": "#7a5560", "surface-container": "#ffe8f0", "error": "#ba1a1a", "inverse-primary": "#ffb1c7", "tertiary-container": "#876735", "on-primary": "#ffffff", "surface-variant": "#ffd8e9", "on-primary-fixed": "#3f001c", "primary-fixed": "#ffd9e2", "tertiary": "#6c4f1f", "on-secondary": "#ffffff", "surface-bright": "#fff8f8", "on-tertiary": "#ffffff", "surface-dim": "#ffcce3", "on-tertiary-fixed": "#281800", "on-surface-variant": "#554247", "outline-variant": "#dbc0c6", "on-tertiary-fixed-variant": "#5d4213", "on-error-container": "#93000a", "secondary-fixed-dim": "#eabac7", "inverse-surface": "#4c223a", "surface-container-highest": "#ffd8e9", "secondary": "#7a545f", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "primary-container": "#b5446e", "secondary-fixed": "#ffd9e2", "surface-tint": "#a33660", "on-primary-fixed-variant": "#841d48", "on-secondary-fixed": "#2e131c", "tertiary-fixed-dim": "#e9c085", "secondary-container": "#ffcdda", "on-tertiary-container": "#ffedd7", "outline": "#887177", "on-background": "#330d24", "surface": "#fff8f8", "on-surface": "#330d24", "background": "#fff8f8", "on-secondary-fixed-variant": "#603d47", "primary": "#962b56", "inverse-on-surface": "#ffecf2", "on-primary-container": "#ffeaee", "surface-container-high": "#ffe0ed", "tertiary-fixed": "#ffddb0" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xs": "0.375rem", "gutter": "1.25rem", "space-md": "1.25rem", "margin": "1.25rem", "margin-md": "2.5rem", "gutter-lg": "2.5rem", "space-sm": "0.75rem", "gutter-md": "1.75rem", "margin-lg": "4rem", "space-lg": "2rem", "space-xl": "3.5rem" }, "fontFamily": { "italic-accent": ["Playfair Display"], "body-sm": ["DM Sans"], "display-lg": ["Playfair Display"], "label-caps": ["DM Sans"], "headline-md": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-md": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "body-lg": ["DM Sans"], "headline-lg": ["Playfair Display"], "body-md": ["DM Sans"], "headline-sm": ["Playfair Display"] }, "fontSize": { "italic-accent": ["18px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-md": ["26px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "500" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "display-lg-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(181,68,110,0.06)]"><div class="h-20 max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Mini Makers Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAPDOD1RThznbrw4KId3AvHynr8yBV0OVHRSSnf7_1FlLJcZ7ydOAgon11xY6hFsPPBq63VGXk8CD2bL3UIkWYkjjrWLSHWdlxqfhUOPgfWqAs1Ki0OlcFtKzv6ZTIzczb3pVR8qhnwiAZO3JLttpNmkSVWM3cRz9fUQnNWInTLK1d7JoXXhwR_PZGHqvt6_djvtAOCbGuZjslyTSLwlIc9dermJZNlIBw9uYH5Yu-h8rv-igsudC5KQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-tight">Mini Makers</span><span class="font-label-caps text-label-caps tracking-widest text-on-surface-variant uppercase hidden sm:block">Crafted with Love, Made for Memories</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low/70 px-space-xs py-1 rounded-full shadow-[0_2px_8px_rgba(181,68,110,0.04)]" data-active-classes="bg-secondary-container text-on-secondary-container font-medium rounded-full shadow-[inset_0_0_0_1px_rgba(201,163,107,0.35)]"><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="shop" href="#">Shop</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="wedding" href="#">Wedding</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="gift-boxes" href="#">Gift Boxes</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="frames" href="#">Frames</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="how-to-order" href="#">How to Order</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="reviews" href="#">Reviews</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_16px_rgba(181,68,110,0.22)] hover:bg-primary transition-all hover:shadow-[0_6px_20px_rgba(181,68,110,0.3)]" href="https://wa.me/923414655335" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span>Order on WhatsApp</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 -left-20 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-80 -right-20 w-[30rem] h-[30rem] rounded-full bg-surface-container-high/60 blur-3xl pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-6 pb-20">
+<!-- 1. Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant mb-6">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant text-[12px] font-sans">/</span>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<span class="text-outline-variant text-[12px] font-sans">/</span>
+<span class="text-primary font-medium">Bouquets</span>
+</nav>
+<!-- 2. Page Header -->
+<header class="flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high text-tertiary mb-3 shadow-[0_2px_8px_rgba(181,68,110,0.05)]">
+<span class="material-symbols-outlined text-[16px]">temp_preferences_custom</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest font-semibold">Lahore &amp; Pattoki Artisan Atelier</span>
+</div>
+<h1 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface font-serif italic tracking-tight mb-4">
+          Bespoke Bouquets Collection
+        </h1>
+<p class="font-italic-accent text-italic-accent text-on-surface-variant italic max-w-2xl leading-relaxed">
+          Forever blooms and conceptual arrangements crafted petal-by-petal in Lahore &amp; Pattoki. Every bouquet is 100% handmade to order.
+        </p>
+<!-- Decorative Divider -->
+<div class="flex items-center justify-center gap-3 w-48 mt-6">
+<span class="h-[1px] w-full bg-gradient-to-r from-transparent to-tertiary-fixed-dim"></span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">favorite</span>
+<span class="h-[1px] w-full bg-gradient-to-l from-transparent to-tertiary-fixed-dim"></span>
+</div>
+</header>
+<!-- 3. Filter Chips Horizontal Bar -->
+<div class="w-full mb-12">
+<div class="flex items-center gap-2 overflow-x-auto pb-3 pt-1 scrollbar-none justify-start lg:justify-center px-1" id="filter-container">
+<button class="filter-chip active-filter flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-[0_4px_12px_rgba(181,68,110,0.2)] transition-all flex-shrink-0" data-filter="all" type="button">
+<span class="material-symbols-outlined text-[16px]">local_florist</span>
+<span>All Bouquets</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="original" type="button">
+<span>Original Flowers (Everlasting)</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="ribbon" type="button">
+<span>Ribbon Flower</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="chocolate" type="button">
+<span>Chocolate</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="hijab" type="button">
+<span>Hijab</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="kids" type="button">
+<span>Kids</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="money" type="button">
+<span>Money</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="photo" type="button">
+<span>Photo</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="accessories" type="button">
+<span>Accessories</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-secondary-container transition-all flex-shrink-0" data-filter="mirror" type="button">
+<span>Mirror</span>
+</button>
+</div>
+</div>
+<!-- 4. Featured Highlight Banner (Inspiration matching) -->
+<section class="w-full bg-gradient-to-br from-surface-container-low via-surface-container to-secondary-container/60 rounded-xl p-6 md:p-10 mb-16 shadow-[0_16px_36px_-6px_rgba(181,68,110,0.12)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Image Showcase Left -->
+<div class="lg:col-span-6 relative">
+<div class="relative overflow-hidden rounded-[140px_140px_28px_28px] shadow-[0_12px_32px_rgba(181,68,110,0.18)] aspect-[4/5] bg-surface-container-highest">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" data-alt="A centerpiece artisan handmade bouquet crafted from crimson red velvet chenille tulips and sky-blue knit forget-me-nots, wrapped in voluminous layers of dusty peach and blush kraft paper tied with a thick mauve satin bow, arranged on a rustic wooden workshop table with fairy warm lights, baby's breath, and floral calligraphy cards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbcyYtzvGU3xaohy8-6AG8qL7zF8LhNVjCwFKm4QcPzqzyegUPLLlpYVZViLIfMc85KBGWz_3QEmMxfVor_svbrkDMouZM2uTAvaJy3J-U6OkLIMSSl0EFdEiODPBlBSdoOIdGtgZuDbB97OCrWV7JBEqtgKsWKR8qHG5pIiBsktd7ClIb6rAL5EeRbfZbEyfJCFraZley9okutYvC8sSvJkFIPXNP9bMUKo50ZxbllobCbCGj8ez2_A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent"></div>
+<!-- Floating Pill Badge -->
+<div class="absolute top-6 left-6 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-bright/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">spa</span>
+<span>Signature Masterpiece</span>
+</div>
+</div>
+<!-- Accent Stamp Card Overlapping -->
+<div class="absolute -bottom-4 -right-4 hidden sm:flex items-center gap-3 bg-surface-bright/95 backdrop-blur-md p-3.5 rounded-lg shadow-[0_8px_24px_rgba(74,32,56,0.1)] max-w-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase font-semibold">100% Everlasting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Never withers, holds soft floral fragrance</span>
+</div>
+</div>
+</div>
+<!-- Highlight Content Right -->
+<div class="lg:col-span-6 flex flex-col items-start lg:pl-6">
+<div class="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase tracking-widest font-semibold mb-4">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>Handmade forever flowers</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif italic mb-4 leading-tight">
+              Everlasting Chenille &amp; Crochet Red Tulips &amp; Soft Azure Blooms
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+              Fluffy, tactile stems hand-molded and wrapped in layered blush kraft paper with dusty rose satin ribbon. Includes fairy warm lights, handwritten calligraphy tag, and keepsake scented wax seal.
+            </p>
+<!-- Feature Bullet Chips -->
+<div class="grid grid-cols-2 gap-3 w-full mb-8">
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-bright/70">
+<span class="material-symbols-outlined text-tertiary text-[18px]">lightbulb</span>
+<span class="font-body-sm text-body-sm text-on-surface">Integrated warm fairy micro-lights</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-bright/70">
+<span class="material-symbols-outlined text-tertiary text-[18px]">history_edu</span>
+<span class="font-body-sm text-body-sm text-on-surface">Custom Urdu/English calligraphy card</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-bright/70">
+<span class="material-symbols-outlined text-tertiary text-[18px]">package_2</span>
+<span class="font-body-sm text-body-sm text-on-surface">Safe courier dispatch box packaging</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-bright/70">
+<span class="material-symbols-outlined text-tertiary text-[18px]">palette</span>
+<span class="font-body-sm text-body-sm text-on-surface">Choose custom wrap &amp; petal tints</span>
+</div>
+</div>
+<!-- Pricing & Action Bar -->
+<div class="flex flex-wrap items-center gap-4 w-full pt-4 bg-surface-container-low/80 p-4 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Starting at</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold">From Rs. 2,800</span>
+</div>
+<div class="ml-auto flex items-center gap-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_16px_rgba(181,68,110,0.25)] hover:bg-primary transition-all duration-300" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20would%20like%20to%20order%20the%20Everlasting%20Chenille%20Tulip%20Set." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Order Tulip Set via DM</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Title for Gallery -->
+<div class="flex flex-col sm:flex-row items-baseline justify-between mb-8 pb-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary font-semibold">Handcrafted Portfolios</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Curated Atelier Arrangements</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 9 handmade creations</span>
+</div>
+<!-- 5. Product Grid (3 Columns Desktop, Asymmetric Editorial Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-lg" id="product-grid">
+<!-- Card 1: Everlasting Chenille Red Tulip Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="original">
+<!-- Arched Photo Viewport -->
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Close up portrait of handcrafted chenille red velvet tulips bundled with soft blue pipe cleaner florets and dried baby's breath, enveloped in dusty pink wrap paper with ribbon bow, studio warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjfgxvHqheYdXliGTe4yUnYnQRgQPLaqa1VG5qmvfa18tghyEg8bvD5U-qzb7ei1-94MxLB3PSNxzqW6oIgB27mJyuNAu684pDsG6nv-qa5Qh_KniJ3euXSU_U-gNZm3t17ekehPretyCMqSHq_CvDPJFoCMTMCpV48Czknzl51a64vaQf7WNZw4vSE8lKC5xz1GqVhoKKMJHMtU0qsLnQt9WvsirSVfFn26hR4OgoAZExbZtutfihIQ"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-primary uppercase font-semibold">Customizable</span>
+</div>
+</div>
+<!-- Card Details -->
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Everlasting Floral</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Everlasting Chenille Red Tulip Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Hand-bent plush velvet chenille blooms with fairy lights</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 2,800</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'm%20interested%20in%20ordering%20the%20Everlasting%20Chenille%20Red%20Tulip%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: Ferrero Rocher & Silk Ribbon Bloom -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="chocolate ribbon">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Luxury handcrafted gift bouquet combining golden wrapped Ferrero Rocher chocolate truffles with hand-folded satin ribbon crimson roses, finished in charcoal and rose gold wrapping with delicate metallic shimmer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Scz3W8aDe5zzQLJtTDgzMPIm9qGRyiyvssuH8-6YiAoB11G6JKDNMpFQ_98qkQQUNizfu1U0eOGaAnF-pQyxrT5IDZTd7Ii65TgjoCdm4O7sYOyvVhCcXpSmfFieSuwxPzHPMuqO8x6Y83-zu7_Rcges_hmC-laexLjS20BXQFt1CxG9ow93hTER-kDSA1hRLc2WqAdO4W3qx0ssyaVfMqM8UoGPTia8eV8WFRVu6Qze5g-bJrQ9eQ"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-primary uppercase font-semibold">Customizable</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Chocolate &amp; Ribbon</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Ferrero Rocher &amp; Silk Ribbon Bloom</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Rich chocolate truffles nestled in handcrafted satin ribbon roses</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 3,500</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'm%20interested%20in%20ordering%20the%20Ferrero%20Rocher%20Silk%20Ribbon%20Bloom." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: Bespoke Cash & Currency Origami Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="money">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="An opulent celebration bouquet of Pakistani currency notes folded into precise origami flower petals and rosettes, arranged with gold pearl sprigs and wrapped in matte black and blush metallic designer wrap paper for wedding salami." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARSu_hBYdz-zNQMZsrdroHHOmjsXlasEqAhTiOP9UCoey8ChiRUvEOqe5Wu6dYRz82y4wChxqWCKniK9SUuf18nWFJ8Rfe2DW3TPnNzw3eS8yqIp_O8ulHDLINgHVCQ1A0KcljsA0h4sbPxR0Q11J9SfF6xiJXdcDPOO6-56Hg5mu67DzeDhh3cR36k5u0RLTtO-JLb1SwPFSu_37MvVKE8-WaBTI8nsPBBLg3t4yqMPgBff6AyEOztg"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-tertiary uppercase font-semibold">Bespoke Amount</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Wedding &amp; Graduation</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Bespoke Cash &amp; Currency Origami Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Crisp notes folded into floral rosettes for weddings and graduations</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 2,200 <span class="text-xs font-normal text-on-surface-variant">+ Cash</span></span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'd%20like%20to%20inquire%20about%20the%20Cash%20Currency%20Origami%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4: Pure Chiffon Hijab & Pearl Rose Bunch -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="hijab">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="High-end presentation of pastel nude and blush georgette chiffon hijabs elegantly sculpted into blooming roses, accented with freshwater pearl pins, gypsophila dried flowers, and ivory organza ribbons." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxVylP8aMuRIHBZJeMmeAdfVSzJSLs84DC-TmZsUvZAKKjwI2JTPOjkIh7-DtjAZRbKeQrtvDd8GFPHGW9IkMyUQq14m3juSj-HV0kwJWrD4DtxlpMYdHRhZHIIEZF_fVPNIC-HclKtQmLPyWzIMnZiomkOLEPljZpBbTKEE_kpTO3VnqIuKDFipdhELrawHPkUPG_2Hby_VNmOKFRT0ga50DaBYgHwhX3TZB85AlWBiqzsPbZ-tUp2w"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-primary uppercase font-semibold">Customizable</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Bridal &amp; Hijabi Gifts</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Pure Chiffon Hijab &amp; Pearl Rose Bunch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Premium georgette hijabs artistically draped with pearl pins and dried baby breath</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 4,200</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I%20want%20to%20order%20the%20Pure%20Chiffon%20Hijab%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 5: Polaroid Memory Keepsake Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="photo">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Emotional keepsake arrangement featuring miniature Polaroid style photographs attached to wooden pegs, nestled among soft lavender chenille daisies, white dried wildflowers, and warm amber micro fairy lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwZr8QDUi-7it_JfdGwqsfpLt8GOHfo0S4niKG2seVjDXot65-rcDicvNhWjoS33EVCioFRHAIk--TtL6uHD2AbWMGfN4RZkROBrBIUEWvgNhFEhEOUbi0HBXSCyl-oq4OuoRdSYiBMCmWMZOJWlxKrUm8yvPHw0laIZh4QOLHcKIMYqnP6dutZWS0gykpsMmNgTThnWsF7VIZMXQY9-NaV3GESYTipfWMpAKiPzOrKvmiaKqkou_3Vg"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-primary uppercase font-semibold">Send Photos</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Personalized Keepsakes</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Polaroid Memory Keepsake Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">10 mini vintage photo prints tucked amongst pastel lavender chenille daisies</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 2,900</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'd%20like%20to%20send%20photos%20for%20the%20Polaroid%20Memory%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 6: Pastel Bunny & Candy Kids Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="kids">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Playful whimsical kid's celebration bouquet with a cute miniature cream plush bunny in the center, surrounding swirled artisan lollipop flowers, pastel pom-poms, and pastel pink scalloped wrapping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC2xC8WbOmoybDTdnUtx5oXHZ5FzLcq1yvMNt6qtBytQSlwGv-MEXYc_NvPE5-eX33dUgbka8MNt7-xaM2N-dYtroAbeyptBiM10lIiocChEkFw2HdPwdbOHvmJkqwbSdv9ruJz81vXbv-WCNxHj1gB3_L5Noqh3ynKFgzKV_es6linAV7e2olnUoa1af-mXUUDx6wSq3wHN5_QDC3wKoDLULfwCpXWToxpFwQ0hAC3LX2dvnnbCN9EQ"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-tertiary uppercase font-semibold">Child Safe</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Little Celebrations</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Pastel Bunny &amp; Candy Kids Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Plush plushie centerpiece, lollipop blossoms, and festive glitter ribbons</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 2,400</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'd%20like%20to%20order%20the%20Pastel%20Bunny%20Kids%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 7: Mini Vanity Mirror & Flora Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="mirror accessories">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Intricate aesthetic bouquet featuring a vintage carved brass pocket compact mirror in the center, encircled by soft velvet forget-me-nots and baby blue preserved hydrangeas with delicate gold foil paper wrapping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJWqJ0KKkEdDDVk_0s2OEphU7SChSegkts89IR3o6wLQA3s3LvHA7YJudGMszB1esPda0iKPD1zPMkQau8XdnKxhreuSMCJ7EOINTr0nrmyTZtFF8aKN5rIJ5-NOh-TbV7W9HzH5In31udm-OXy0OveB-lbisZj3lTlgzY6-amMHDVVS1ozksCbd_l8GiGChXK5FwC0AwQypWcdz9u8Xy7BEOF_wsRkLYdt-A32mVEzhCWl4DE2S1GyA"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-tertiary uppercase font-semibold">Engraved</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Vanity &amp; Keepsake</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Mini Vanity Mirror &amp; Flora Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Compact engraved brass handbag mirror surrounded by sculpted velvet forget-me-nots</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 3,100</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'm%20inquiring%20about%20the%20Mini%20Vanity%20Mirror%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 8: Satin Bow & Hair Accessory Bouquet -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="accessories ribbon">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Chic accessories bouquet showing handmade mulberry silk scrunchies, pearl embellished hair claws, and hand-rolled ribbon roses in shades of rose gold, champagne, and dusty mauve." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3ireqbccy7mEVCphhZwHpZrkBDe60WE5QgSB5MCZ8WLCvkwelglkvmdQlXyhItk-5j2Yx_EUuKRd4H1_PNiCj9deHyNcjRHYlm8ZwhGxIRibFLZJ_2rzv6x_NRsotrbUwvlC6HohTIJse3Frs3RiOjyd52MJKmHip6wb4m1l-lHA4NNbZl3jw3K0peEzmQUV31iHO6EhUJDBIMvJjepkUjaoqetB-26jNy-oMaoqlfB9iArVIwB2NKQ"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-primary uppercase font-semibold">Customizable</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Self-Care &amp; Styling</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Satin Bow &amp; Hair Accessory Bouquet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Includes 4 silk scrunchies, pearl hair claws, and ribbon roses</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 2,600</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I%20would%20love%20to%20order%20the%20Satin%20Bow%20and%20Hair%20Accessory%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 9: Blush & Sky Blue Petite Meadow -->
+<article class="product-item flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_8px_24px_-4px_rgba(181,68,110,0.08)] hover:shadow-[0_16px_36px_-6px_rgba(181,68,110,0.14)] transition-all duration-300 transform hover:-translate-y-1" data-category="original">
+<div class="p-3 pb-0">
+<div class="relative w-full aspect-[4/5] rounded-[100px_100px_16px_16px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Petite desktop floral bouquet of handmade miniature knit blue forget-me-nots, buttercup flowers, and faux eucalyptus leaves, wrapped in a compact blush paper cone tied with cotton baker twine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvPQsFN8GBRD2iSEPvg9w-VJyLGqMerYlSuZGx9prcS3A5AsWxJ6zSvAfxxdqrtfRnxy45xuYxHb9sFEiZoUUbHVOGoDMHqaaDAhgicq_D23bNuta1X3sZZ9VjAUGfzszhD5C7OD5WE8IGQ65dc8xUR7WGlW5MlrRBLxTeU-lPXEVRLLUPzZc1Wu6EDviNrKoWz-JKX-1mJAkGirbAHoVr0tE6OazMG7X1a1bFRNSgRg3c1ng3xQlydw"/>
+<span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Budget Friendly</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5 pt-4">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider mb-1 font-semibold">Desk &amp; Study Blooms</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-2">Blush &amp; Sky Blue Petite Meadow</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-2">Mini desktop bouquet of forget-me-nots, buttercups, and eucalyptus</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Price</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Rs. 1,800</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers,%20I'd%20like%20to%20order%20the%20Petite%20Meadow%20Bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Order via DM</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Atelier Process Banner -->
+<section class="mt-16 p-8 rounded-xl bg-surface-container-low shadow-[0_4px_20px_rgba(181,68,110,0.06)]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-1">Tailored Palettes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Request your bridal hex codes, favorite colors, or custom paper wraps via direct consultation.</p>
+</div>
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-1">Nationwide Delivery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Carefully cushioned delivery boxes to prevent crushing across Lahore, Karachi, Islamabad &amp; all PK cities.</p>
+</div>
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[24px]">history</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-serif mb-1">Lifetime Memory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chenille, crochet, and ribbon arrangements do not dry up or shed. Keepsakes to cherish for decades.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- 6. Bottom Sticky CTA bar -->
+<div class="sticky bottom-0 left-0 w-full z-40 bg-surface-bright/95 backdrop-blur-xl shadow-[0_-8px_24px_rgba(181,68,110,0.1)] py-4">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Need a custom bouquet or unique Pinterest reference?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Send your inspiration photo or color palette to our Lahore &amp; Pattoki artisans on WhatsApp.</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_16px_rgba(181,68,110,0.25)] hover:bg-primary transition-all duration-300 flex-shrink-0" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20have%20a%20Pinterest%20reference%20for%20a%20custom%20bouquet." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Chat with Florist on WhatsApp (+92 341 4655335)</span>
+</a>
+</div>
+</div>
+<!-- Client-side Interactive Filter Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterChips = document.querySelectorAll('.filter-chip');
+      const productItems = document.querySelectorAll('.product-item');
+
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', function() {
+          const selectedFilter = this.getAttribute('data-filter');
+
+          // Toggle Chip Active States
+          filterChips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-[0_4px_12px_rgba(181,68,110,0.2)]');
+            c.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          });
+
+          this.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          this.classList.add('bg-primary-container', 'text-on-primary', 'shadow-[0_4px_12px_rgba(181,68,110,0.2)]');
+
+          // Filter Products Grid
+          productItems.forEach(item => {
+            const categories = item.getAttribute('data-category') || '';
+            if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</div></main><aside class="fixed bottom-6 right-6 z-40"><a class="group flex items-center gap-space-xs bg-primary-container text-on-primary pl-space-md pr-space-md py-3 rounded-full shadow-[0_12px_32px_rgba(181,68,110,0.26),0_2px_8px_rgba(74,32,56,0.06)] hover:bg-primary hover:shadow-[0_16px_40px_rgba(181,68,110,0.36)] transition-all duration-300 transform hover:-translate-y-0.5" href="https://wa.me/923414655335" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[24px]">mark_chat_unread</span><span class="font-label-md text-label-md tracking-wide">Order on WhatsApp</span></a></aside><footer class="w-full bg-surface-container-low pt-space-xl pb-space-lg shadow-[0_-1px_16px_rgba(181,68,110,0.03)]"><div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-lg pb-space-lg"><div class="md:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-primary font-serif">Mini Makers</span></div><p class="font-italic-accent text-italic-accent italic text-on-surface-variant max-w-md">Crafted with Love, Made for Memories. Handcrafted keepsakes, celebratory trousseaus, and romantic bespoke gifts made to be cherished forever.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="material-symbols-outlined text-tertiary text-[20px]">place</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lahore &amp; Pattoki, Punjab, Pakistan</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase text-tertiary tracking-widest font-semibold">Curated Collections</span><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="wedding" href="#">Wedding &amp; Nikkah Keepsakes</a><a class="hover:text-primary transition-colors" data-path="gift-boxes" href="#">Handcrafted Gift Boxes</a><a class="hover:text-primary transition-colors" data-path="frames" href="#">Preserved Memory Frames</a><a class="hover:text-primary transition-colors" data-path="shop" href="#">Bespoke Stationery &amp; Accents</a></nav></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase text-tertiary tracking-widest font-semibold">Artisan Concierge</span><p class="font-body-sm text-body-sm text-on-surface-variant">Direct consultations on WhatsApp for personalized orders &amp; bridal styling.</p><a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-on-surface transition-colors" href="https://instagram.com/minimakers4" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">favorite</span><span>@minimakers4</span></a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/923414655335" rel="noopener noreferrer" target="_blank">+92 341 4655335</a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-high/40 p-space-md rounded-lg"><p class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-left">© 2025 Mini Makers Atelier. Handcrafted in Lahore &amp; Pattoki with timeless devotion.</p><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[18px]">auto_awesome</span><span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Bespoke Gifting Studio</span></div></div></div></footer></body></html>

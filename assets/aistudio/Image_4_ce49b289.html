@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#330d24","on-error-container":"#93000a","on-primary-container":"#ffeaee","on-tertiary-container":"#ffedd7","on-secondary-container":"#7a5560","outline-variant":"#dbc0c6","on-error":"#ffffff","on-primary-fixed-variant":"#841d48","on-tertiary-fixed-variant":"#5d4213","on-primary":"#ffffff","surface-container-high":"#ffe0ed","on-tertiary-fixed":"#281800","error-container":"#ffdad6","surface-container":"#ffe8f0","on-surface":"#330d24","inverse-surface":"#4c223a","secondary-fixed-dim":"#eabac7","primary-container":"#b5446e","secondary":"#7a545f","surface-container-lowest":"#ffffff","on-surface-variant":"#554247","inverse-primary":"#ffb1c7","surface-container-highest":"#ffd8e9","error":"#ba1a1a","on-tertiary":"#ffffff","surface-variant":"#ffd8e9","primary":"#962b56","on-secondary-fixed":"#2e131c","tertiary-fixed":"#ffddb0","surface":"#fff8f8","surface-tint":"#a33660","inverse-on-surface":"#ffecf2","surface-bright":"#fff8f8","primary-fixed-dim":"#ffb1c7","outline":"#887177","tertiary-container":"#876735","primary-fixed":"#ffd9e2","background":"#fff8f8","surface-container-low":"#fff0f4","on-secondary":"#ffffff","tertiary":"#6c4f1f","tertiary-fixed-dim":"#e9c085","secondary-container":"#ffcdda","secondary-fixed":"#ffd9e2","surface-dim":"#ffcce3","on-primary-fixed":"#3f001c","on-secondary-fixed-variant":"#603d47"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"margin-lg":"4rem",gutter:"1.25rem","gutter-lg":"2.5rem","space-xs":"0.375rem",margin:"1.25rem","space-sm":"0.75rem","space-lg":"2rem","space-md":"1.25rem","margin-md":"2.5rem","space-xl":"3.5rem","gutter-md":"1.75rem"},fontFamily:{"body-md":["DM Sans"],"body-sm":["DM Sans"],"display-lg":["Playfair Display"],"headline-md":["Playfair Display"],"headline-lg":["Playfair Display"],"italic-accent":["Playfair Display"],"label-md":["DM Sans"],"label-caps":["DM Sans"],"body-lg":["DM Sans"],"headline-sm":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"]},fontSize:{"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-md":["26px",{lineHeight:"32px",fontWeight:"500"}],"headline-lg":["36px",{lineHeight:"44px",fontWeight:"500"}],"italic-accent":["18px",{lineHeight:"26px",fontWeight:"400"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"500"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"26px",fontWeight:"600"}],"display-lg-mobile":["38px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"34px",fontWeight:"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,32,56,0.04)]"><div class="bg-surface-container py-1.5 px-4 text-center border-b border-outline-variant/30"><div class="max-w-7xl mx-auto flex items-center justify-center gap-2 font-label-caps text-label-caps text-secondary"><span class="material-symbols-outlined text-xs text-primary">auto_awesome</span><span>Free handwritten card with every order • Handcrafted in Lahore &amp; Pattoki • Deliveries Across Pakistan • Call/WhatsApp: +92 341 4655335</span><span class="hidden sm:inline font-italic-accent text-italic-accent text-primary px-1">• محبت سے تیار کردہ</span><span class="material-symbols-outlined text-xs text-primary">auto_awesome</span></div></div><div class="h-20 max-w-7xl mx-auto px-6 lg:px-margin-lg flex items-center justify-between gap-4"><div class="flex items-center gap-3"><img alt="Mini Makers Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqiukEA4KtHxTae5k__0yCI06_1xFYTXuOWYgE8Wnk9qdw67g6j48ernAdt5ac1OGoDe5M0kI-XGPc3wMkSZ_Oo39XmRlp8GMbe8N36mpxcoNFrvkrBOuYtf0L5-FkDtmV1kRiHNcyHI68WqXz7KLAr277iwPDs5J6JRvkuSFWzyzu2rl1GyI2WvnaWvMYU5BZ__dgDTCo-28bjDmyYqN0Y-ZSAfadjJHbxktU7rxyLyTWVn2eFXI5Q"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Mini Makers</span><span class="font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase mt-1">Little Creators • Handmade Keepsakes</span></div></div><nav class="hidden lg:flex items-center gap-1 bg-surface-container-low/80 p-1.5 rounded-full shadow-[0_2px_10px_rgba(181,68,110,0.06)]" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-full"><a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" data-path="home" href="#">Home</a><a aria-current="page" class="px-4 py-2 transition-all duration-200 bg-surface-container-high text-primary font-semibold rounded-full" data-path="collections" href="#">Collections</a><a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" data-path="wedding-keepsakes" href="#">Wedding Keepsakes</a><a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" data-path="how-to-order" href="#">How to Order</a><a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" data-path="customer-love" href="#">Customer Love</a><a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-3"><a class="hidden sm:inline-flex items-center gap-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-full shadow-[0_4px_16px_rgba(181,68,110,0.22)] transition-all duration-200 group" href="https://wa.me/923414655335" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform">chat</span><span>Order on WhatsApp</span></a><a class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-secondary hover:text-primary transition-colors" href="https://instagram.com/minimakers4" rel="noopener noreferrer" target="_blank" title="@minimakers4 Instagram"><span class="material-symbols-outlined text-base">photo_camera</span></a><div class="p-0.5 rounded-full bg-gradient-to-tr from-secondary-container to-surface-container-highest"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAqQSHbTTr0qdpwPd6xrKzZD3zJH8QjumxP_DApao2P82T4xqeQOhkpzJH7cZZTrARsIFLNWkElyE7mH2GjCOkPDvCmjtDgU-h-Yal8AYDc-wCYp0acQsW93uAwpx7mh9edDaKZl-lcslsgyejxEdOg5Ul0IBJxlRr09QIGKdTluvtkt34jKcXooDY3Dm3VPQsj_ef_HEGEmLbbRilpRexlazs0P06ioy2fZ2P9ByZaHcuHh2zpJ3zBQ"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Atmospheric Banner with Arch Backdrop -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container via-surface to-background px-6 lg:px-margin-lg pt-12 pb-16">
+<!-- Ambient Dream Tints and Architectural Glows -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-secondary-container/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-72 h-72 bg-tertiary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Micro Overline Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high text-primary shadow-sm mb-5">
+<span class="material-symbols-outlined text-xs">brush</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Handcrafted in Lahore &amp; Pattoki Studios</span>
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+</div>
+<!-- Main Headline with Editorial Contrast -->
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl tracking-tight leading-tight">
+        Our Bespoke Creations <span class="font-italic-accent text-primary italic font-normal">Catalogue</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed">
+        Every piece is thoughtfully designed, hand-stitched, and personalized in our Punjab workshops. Select any design or share your custom Pinterest mood board to order directly via WhatsApp.
+      </p>
+<!-- Search & Quick Assist Bar -->
+<div class="w-full max-w-2xl mt-8">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full p-2 shadow-xl shadow-primary/5">
+<div class="flex items-center pl-4 text-primary">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full bg-transparent px-3 py-2 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" id="catalogue-search-input" onkeyup="filterCatalogueProducts()" placeholder="Search velvet platters, chenille tulips, doodh pilai glasses, nikkah pens..." type="text"/>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-1.5 shrink-0" onclick="clearSearch()" type="button">
+<span>Explore</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-3 mt-3 text-on-surface-variant font-label-caps text-label-caps flex-wrap">
+<span class="text-tertiary">Popular Inquiries:</span>
+<button class="hover:text-primary transition-colors underline decoration-outline-variant/60 underline-offset-4" onclick="quickFilterKeyword('Nikkah')" type="button">#NikkahPlatters</button>
+<button class="hover:text-primary transition-colors underline decoration-outline-variant/60 underline-offset-4" onclick="quickFilterKeyword('Chenille')" type="button">#ChenilleTulips</button>
+<button class="hover:text-primary transition-colors underline decoration-outline-variant/60 underline-offset-4" onclick="quickFilterKeyword('Doodh Pilai')" type="button">#DoodhPilaiGlass</button>
+<button class="hover:text-primary transition-colors underline decoration-outline-variant/60 underline-offset-4" onclick="quickFilterKeyword('Eidi')" type="button">#EidiChest</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bespoke Filter Strip -->
+<section class="sticky top-20 z-30 w-full bg-surface/95 backdrop-blur-md shadow-sm py-4 px-6 lg:px-margin-lg">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+<!-- Horizontal Scrollable Pill Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0 scrollbar-none" id="category-pills">
+<button class="category-btn active px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm transition-all" onclick="filterByCategory('all', this)">
+          All Collections (12)
+        </button>
+<button class="category-btn px-4 py-2 rounded-full bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high hover:text-primary whitespace-nowrap transition-all" onclick="filterByCategory('flowers', this)">
+          Everlasting Bouquets &amp; Chenille
+        </button>
+<button class="category-btn px-4 py-2 rounded-full bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high hover:text-primary whitespace-nowrap transition-all" onclick="filterByCategory('wedding', this)">
+          Pakistani Wedding Specials
+        </button>
+<button class="category-btn px-4 py-2 rounded-full bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high hover:text-primary whitespace-nowrap transition-all" onclick="filterByCategory('hampers', this)">
+          Gift Hampers &amp; Treats
+        </button>
+<button class="category-btn px-4 py-2 rounded-full bg-surface-container text-secondary font-label-md text-label-md hover:bg-surface-container-high hover:text-primary whitespace-nowrap transition-all" onclick="filterByCategory('frames-boxes', this)">
+          Frames, Eidi &amp; Keepsakes
+        </button>
+</div>
+<!-- Sorting Selector & Quick Counter -->
+<div class="flex items-center gap-3 w-full lg:w-auto justify-end shrink-0">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">tune</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Sort:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer" id="sort-select" onchange="sortCatalogue(this.value)">
+<option value="featured">Featured Keepsakes</option>
+<option value="bestseller">Wedding Bestsellers</option>
+<option value="price-asc">Budget-Friendly First</option>
+<option value="luxury">Luxury Tier Hampers</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Catalogue Product Grid Section -->
+<section class="w-full px-6 lg:px-margin-lg py-12 bg-background">
+<div class="max-w-7xl mx-auto">
+<!-- Studio Assurance Alert Ribbon -->
+<div class="mb-10 p-5 rounded-2xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Made-to-Order Keepsakes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Urdu calligraphy, customized groom/bride names, custom color ribbons &amp; free personalized greeting message on every order.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-italic-accent text-italic-accent text-primary">محبت کے ساتھ تیار کردہ</span>
+<a class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers!%20I%20have%20a%20custom%20gift%20idea%20I%20want%20to%20discuss." target="_blank">Direct Inquiry</a>
+</div>
+</div>
+<!-- Catalogue Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8" id="product-grid">
+<!-- Product 1: Red Velvet Tulip Bouquet -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="flowers" data-featured="1" data-price="2800">
+<!-- Romanesque Arch Frame -->
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxurious handcrafted red velvet and blush pink chenille wire tulip bouquet held in delicate hand, wrapped with golden gossamer ribbon, soft warm fairy lights woven throughout, cinematic moody lighting with Lahore courtyard architectural elements in background, deep plum and rose gold palette, heirloom aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsJI0-jWKItGMuRWjAGM3GDujnBMXQtGMNTOQlK5WXsr2oJDxEkAtTk1C8F1FjhZry5dvWFlT7wyO2XbNj-p33aMew6Nx_yCFVlON1Brcj1_jQ9PGb5p9nXYWfIc7y6PxwilrsYm3E1b4IrsXkU0Yc1QsYb9-Ct-Cp0vWlXJ6t5AeK43l0Cv8Tw6xFaGnoTmp1_c3H24cfrEAtu25wHcVHfEHRQ18bwaS6w4BdiiT3bfpUoP80PAxL1w"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Everlasting Bloom</span>
+<div class="absolute bottom-3 left-3 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed">bolt</span> Fairylights Included
+            </div>
+</div>
+<!-- Product Content -->
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Bouquets &amp; Florals</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Lahore Hand-Stitched</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Velvet &amp; Chenille Tulip Bouquet
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Fluffy plush chenille handcrafted tulips with everlasting stems, warm fairy lights &amp; heavy matte blush wrapping paper.
+            </p>
+<!-- Customization Badges -->
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Custom Petal Colors</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Urdu Ribbon Print</span>
+</div>
+<!-- Pricing & Action Strip -->
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 2,800 - 3,500</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Velvet &amp; Chenille Tulip Bouquet', 'Bouquets &amp; Florals', 'Rs. 2,800 - 3,500', 'Chenille wire, velvet ribbon, battery-operated warm fairy lights, embossed wrapping.', 'Includes custom stem count (6, 9, 12 tulips), personalized ribbon printing in Urdu or English, and complimentary keepsake tag.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20am%20interested%20in%20ordering%20the%20Velvet%20and%20Chenille%20Tulip%20Bouquet.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Red%20Velvet%20Chenille%20Tulip%20Bouquet." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 2: Royal Doodh Pilai Glass -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="wedding" data-featured="1" data-price="2400">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ornate Pakistani wedding doodh pilai glass set, crystal chalice embellished with delicate champagne pearls, golden gotta lace, personalized Urdu gold foil calligraphy of groom and bride name, resting on a round bevelled mirror tray surrounded by soft blush rose petals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ow18ClwWwSkDmBwXYg2aDabx7eSlGASND-SaMucZb6kBYwuN0B26YxYsJLPxfjfNSSgG1dQl6u4FjNF6x4oY9yWtWxN_jVUqN44jT_RO7iGtSxKfNwV0O9ErC_5FeKRhpO-crY0VmRAhzqHXzzWRUduu40-2uU5T3O7ScR1oFr2QoTHNQholpWDjN0P1znljotXxg4fhkVtYExV6WmTPrQBkLFz_siOh-SOKt8RnrYe8UBZ7YSmThw"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-3 py-1 rounded-full shadow-sm font-semibold">Wedding Bestseller</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Wedding Keepsakes</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Glass &amp; Mirror</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Royal Pearl Doodh Pilai Glass
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Custom engraved bride &amp; groom initials, baroque pearl tassels, and custom mirror coaster base for ceremonial photographs.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Name Engraving</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Mirror Base</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 2,200 - 2,900</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Royal Pearl Doodh Pilai Glass', 'Wedding Keepsakes', 'Rs. 2,200 - 2,900', 'Cut crystal glass, hand-attached Austrian pearls, gold vinyl name decal, bevelled glass coaster.', 'Includes bride &amp; groom names in Arabic or Urdu Nastaliq calligraphy, choice of gold or silver pearl trims.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Royal%20Pearl%20Doodh%20Pilai%20Glass.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Royal%20Pearl%20Doodh%20Pilai%20Glass." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 3: Velvet Ring Platter -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="wedding" data-featured="1" data-price="4200">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Editorial top-down shot of a cushioned velvet engagement ring ceremony tray platter in rich dusty rose and maroon, preserved baby breath flowers, golden metallic rings nestled inside, laser cut Urdu couple name script on acrylic plaque" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMKiW_SwBKz0wb8F_bPVdW5RPIW3f_BAHfcIJ2Xs69T2OJd-TKpT3T2o2fvto8NBK7D9anaLk4lzP80BRhtZ8MmHBfX_TTptqAVPZnd1MsI4g5AijSkLlXZACvVNxl91J9zSfYSo2dWSndxp-Z9qabTPcl_MlBjvlFymaLfudmCeQCWaGFM98c0NbEYSAPvsgceuBGXWxdeHObSrHGha6o-oWeL_TB_tfXMV9zvBM6OYhIxFd7KyEGbA"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Ceremony Essential</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Wedding Keepsakes</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Cushioned Arch</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Velvet Ring Ceremony Platter
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Arch silhouette upholstered in fine micro-velvet, dual ring slots, dried gypsophila florals &amp; acrylic mirror name cutouts.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Dual Ring Slots</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Preserved Gypsophila</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 3,800 - 4,800</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Velvet Ring Ceremony Platter', 'Wedding Keepsakes', 'Rs. 3,800 - 4,800', 'Dense foam cushion, micro-velvet fabric, acrylic mirror lettering, preserved dried floristry.', 'Choose velvet shade (Emerald, Dusty Rose, Champagne, Burgundy), custom couple date and Urdu calligraphy.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Velvet%20Ring%20Ceremony%20Platter.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Velvet%20Ring%20Ceremony%20Platter." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 4: Mirror Mosaic Mehndi Thaali -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="wedding" data-featured="0" data-price="3200">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Pakistani festive Mehndi Thaali platter decorated with genuine mirror mosaic glass pieces, marigold and gota patti borders, dual brass diya lamps, vibrant mustard yellow and terracotta undertones, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWuabHxYSZmIOd1wnZj0vR97jejoY_B5rcAP7yIKs8bFEcu-OcohI_vOsEVGeIfQR_u70ZDK9Q5w0b-ZJ8dunXtPfAernyE-TBkhcBb2H3IQvZ0B4bEIsJRQOUxl_Fb2NqvuaMpRHImDJUpSaHxBM5P-IpRDOudAr7sCUPJRsztixAuDQRN_SSAMRXiOmXMxNj1EzeSRA2msDLIUoJrJB8jqmD34_dfcQm--5bPSWnpHLvsD1Wgq-H6g"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-secondary shadow-sm">Festive Folk</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Wedding Specials</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Gotta &amp; Diya</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Mirror Mosaic Mehndi Thaali
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Hand-fitted geometric mirrors, vibrant mustard border trim, twin diya holders &amp; compartment for organic henna cones.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Real Brass Diyas</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Scratch-Resistant Glass</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 3,000 - 3,600</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Mirror Mosaic Mehndi Thaali', 'Wedding Specials', 'Rs. 3,000 - 3,600', 'Hand-cut glass mirror mosaic, gotapatti fabric border, brass diya cup mounts.', 'Personalized with Mehndi tags, optional matching oil and dry fruit bowls.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Mehndi%20Thaali.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Mirror%20Mosaic%20Mehndi%20Thaali." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 5: Feather & Gold Nikkah Signing Pen -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="wedding" data-featured="1" data-price="1800">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Personalized luxury Nikkah signing feather pen, pure white and ivory ostrich plumes adorned with gold filigree wire, crystal encrusted barrel, engraved bride and groom initials on miniature hanging medallion, placed on silk parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdd2w0cSGzW_4ncO9P4-WU4vBdl-6C_9JrpwB3tQYHnle7snzO5KcN8gTROGLsz12iV_xSSHRttCnZGcNm9HwGuSXVBRPsv4KXu6sSoC7g2pgxjv2-9trgAFu1L0dxtNFaO59ofczJN-mb2Wlkc6l4v5hru4836SvuBAxwry11Gls4P8TVt6lIOyuVu6DRMSeambf5o3oIrMIRfSpRxrJUUhkbjddbVbRAIP1bg-VxJ6LQEBOeq07CCw"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Budget Signature</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Wedding Keepsakes</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Under Rs. 2,500</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Gold Ostrich Feather Nikkah Pen
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Pure goose and ostrich plume with faceted crystal barrel, smoothly flowing archival black ink &amp; engraved initials tag.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Hang Charm Engraving</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Feather Color Choice</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 1,600 - 2,100</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Gold Ostrich Feather Nikkah Pen', 'Wedding Keepsakes', 'Rs. 1,600 - 2,100', 'Premium natural plume, gold metallic wire wrap, German gel refill, acrylic laser charm.', 'Includes gift presentation box and custom bride/groom names engraved on charm.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Nikkah%20Signing%20Pen.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Feather%20Nikkah%20Signing%20Pen." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 6: Sweet Tooth Alphabet Snack Box -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="hampers" data-featured="1" data-price="3500">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Large customized initial letter monogram candy hamper box shaped like letter A, filled with gourmet imported chocolates, Kinder, KitKat, artisan candies and fresh strawberries, tied with wide champagne satin bow, soft pastel aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7KGAKQM-yZqmqjdoLlKaxN6wSb0Q46ifbpGYmGN7TUvA_7XZXLBdYNCJAOM9R1R9kloaBTu9ddV1-eJ5VkthPbn0hbsn2BpFfQFlpXh4SX4fZJ2EMAMT6TqeQ8KaogzrOeOiZg7aa0W9GE8itM8JK38Do2goN5AP_Oas46Y9BnIy2qPWNrGodL89k4WkOw-f4NEc-PQlKmdDFUyrFtZXjDYVGW9tB5hgQV-i1SkhvZtSKZ-tPkHrolw"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-secondary shadow-sm">Birthday Favorite</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Hampers &amp; Treats</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Custom Letter A-Z</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Sweet Tooth Alphabet Box
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Any custom initial alphabet hand-built and densely packed with imported treats, customized polaroid prints &amp; helium balloon topper.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Custom Letter Shape</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Choice of Chocolates</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 3,500 - 5,500</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Sweet Tooth Alphabet Box', 'Hampers &amp; Treats', 'Rs. 3,500 - 5,500', 'Reinforced rigid board letter casing, food-grade paper lining, imported confections.', 'Provide recipient name/letter, chocolate preference (Ferrero, Kinder, Cadbury), and personalized message card.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Sweet%20Tooth%20Alphabet%20Box.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Alphabet%20Snack%20Box." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 7: Eidi Treasure Wooden Chest -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="frames-boxes" data-featured="0" data-price="2900">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Handcrafted solid pine wood treasure chest for Eidi gift hampers, vintage brass hasp clasp, intricate laser engraved Urdu calligraphy reading Eid Mubarak with customized family name, velvet interior lining, warm studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ChzYGUoL1IBB2l8Ydgx6-xeESFNaMuhfxpWFqABtC93QWQlXK9o6rby_GW25PxwIMD-K4RdGbTAPaaQbvQFXWS_ngqXGZA8NuqhcMRPUI4NsuPKSQYmaDCUWDGjsz_H1wp5d0sepRi4CMA_n1usE3_DXpf9p2eL2Ihpd1MgWu4aNY1CAfeAYUmcYZAmC1iN_eEj832yOggFs_s0zGGE3V6kIX8RLrZVtgNL40fvOnAhD8W4eirfUwA"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-3 py-1 rounded-full shadow-sm font-semibold">Festive Special</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Frames &amp; Keepsakes</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Solid Pine Wood</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Eidi Treasure Wooden Chest
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Brass lock latch, personalized laser carved Urdu family title, velvet base with separate slot for crisp currency notes and sweets.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Urdu Laser Carving</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Reusable Keepsake</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 2,900 - 3,800</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Eidi Treasure Wooden Chest', 'Frames &amp; Keepsakes', 'Rs. 2,900 - 3,800', 'Seasoned pine wood, polished brass fixtures, velvet-lined inner compartments.', 'Can be engraved with Eid greetings, children’s names, or family clan title in Urdu or English.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Eidi%20Wooden%20Chest.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Eidi%20Treasure%20Chest." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 8: Cherished Polaroid Memory Frame -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="frames-boxes" data-featured="1" data-price="2100">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Deep shadow box frame displaying multiple printed mini polaroid photo prints held by miniature wooden pegs along micro fairy lights strings, pressed wildflowers and calligraphy song lyrics at base, elegant cream frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo_hGVFCEvtmwMp95G2YsWD44LfwM47s0-jREXHCNEarvBIxbaLhm7u01e4vy0jzxSV5Rr3Lw_ghR71Y7xEwPieI49-goIE99U6GyULUIFp5Tr-PFF2S_-37Vvt2YrmpNpCZeaYhJ9zOzFNokCBId4X9wvsKnFa7hIDEP20XRAnNZR-Iw1aY8NMz_lIaEt2RPZZ0tIE1JywW1Byt_iP-7UkfxBEjIZ9WKmwen8t1SpTYy2H2b49Rxy2Q"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Budget-Friendly</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Frames &amp; Albums</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Under Rs. 2,500</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Cherished Polaroid Memory Frame
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Multi-layer floating depth frame, includes 6-12 high-res printed polaroid squares, fairy string and wooden pegs.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Free Photo Printing</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Spotify Code Plaque</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 2,100 - 2,700</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Cherished Polaroid Memory Frame', 'Frames &amp; Albums', 'Rs. 2,100 - 2,700', 'MDF composite shadowbox frame with real glass front, LED copper wire, archival photo gloss paper.', 'Send photos via WhatsApp; we crop, edit, tone, print, and peg them securely with custom caption date.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Polaroid%20Memory%20Frame.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Polaroid%20Memory%20Frame." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 9: Money & Chocolate Ribbon Bouquet -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="1" data-category="flowers" data-featured="1" data-price="4500">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate artisanal money bouquet with authentic crisp currency notes meticulously origami-folded into flower rosettes, paired with golden wrapped Ferrero Rocher chocolates, surrounding blush paper wrap, silk ribbon bow, luxury gifting aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeGBuRUT7Hr203LaFQTDBx2r0gEkh52d9vqopXpTSOzoO0B_yCUma_XraJJl1_cbYH57f_cPGf9Q_UpP6tr3byZjejJ6SJPdmSkvU5faxKf9HNQwJaKleSGQHv4XaJFba-9O-rLXnvVXwgpQ4KOpB8Wy1emfwGV4SIwpg82PNIYZBw2uBN2_mzzVvhKas74fM3tq8v1uKAybjJ7MgY_2pQYfWMaJhWG47MhdlOfSo-6VW1-9_SwyuYqw"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-3 py-1 rounded-full shadow-sm font-semibold">Luxury Gifting</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Everlasting Bouquets</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Bespoke Currency</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Money &amp; Ferrero Origami Bouquet
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Crisp real notes origami-folded without damage, interspersed with golden Ferrero Rochers and satin ribbon borders.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Zero Note Damage</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Custom Note Denomination</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Making Fee + Cash</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 2,200 + Cash</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Money &amp; Ferrero Origami Bouquet', 'Everlasting Bouquets', 'Rs. 2,200 making fee + chosen cash value', 'Protective plastic sleeve folding (no tape touching currency), Ferrero chocolates, heavy wrapping.', 'Select note denomination (Rs. 100, 500, 1000) and quantity of notes or chocolate flowers.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Money%20Origami%20Bouquet.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Money%20Bouquet." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 10: Baby Welcome Milestone Box -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="frames-boxes" data-featured="0" data-price="4200">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Baby announcement keepsake luxury trunk box in pastel baby blush and mint accents, contains hand-knitted crochet newborn booties, gold mirror acrylic birth milestone stat plaque, soft baby rattle, heirloom presentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3-LhgzHlLtjNJOtIg18kww0uL-IGJXr98EkYRZ1oW26YXjZanFHg2LCfXMI5y51sGXxDmfMWws3GyO8dAVKnKT41dlCfvx2bJgKtb8M-qiOjTdvuYTeyUP-1E0FmH3dI7xGgXF6Hr-7yvjEtn_jrYXvBKGrIYK_P_bo6uf1Cbd-EqH41H4n6o81vMxAFD97ifueAflthdf5i1KFhZF37oPzEF_Uo1MndmbtYlfHvlCE7XaNNOziuBag"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Newborn Heirloom</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Baby &amp; Milestone</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Crochet &amp; Wood</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Baby Milestone Welcome Chest
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Engraved birth date &amp; weight statistics, hand-crocheted woolen baby booties, and personalized golden acrylic name plate.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Custom Birth Stats</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Hand-crocheted Keepsake</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 3,900 - 4,800</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Baby Milestone Welcome Chest', 'Baby &amp; Milestone', 'Rs. 3,900 - 4,800', 'Handcrafted trunk, organic baby-safe wool, laser cut mirrored acrylic name stat board.', 'Provide baby’s full name, birth time, weight, and delivery date for custom engraving.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Baby%20Milestone%20Chest.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Baby%20Milestone%20Chest." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 11: Luxury Velvet Rose Dome Box -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="hampers" data-featured="1" data-price="4900">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury circular rose dome box wrapped in deep wine velvet, containing preserved real crimson eternity roses under a high-clarity acrylic dome, lower secret pull-out jewelry or perfume drawer with satin ribbon pull" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIXA-Tu9XpXB2hzS8pvVRui4x7yMojbW0tOVkpucHu8jOVPSwLYqSJB64O-tHO-_TIxLnYwVBvmCLfeAzc9Kn0VpjZXn-7La-iQqO55JhmvhFu8NGu3AMAhTAIBlTYJa1AGyIudU5X-DF85V2fdWK-u_4wn0i07H1zXurLjy7Mf2sVssMSQnVnqW-grUxoFIMJPc58B5vLVroeQ6Yzn2eBOnl4f8v0YckUJnNYpOpcl76YkeboMxKqDQ"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Secret Drawer</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Hampers &amp; Boxes</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">Eternity Rose Dome</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Velvet Rose Dome &amp; Jewelry Drawer
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              High-clarity dome housing eternal roses with a hidden velvet glide drawer for your gift ring, watch, or perfume.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Hidden Drawer</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ 3-Year Preserved Roses</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 4,800 - 6,200</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Velvet Rose Dome &amp; Jewelry Drawer', 'Hampers &amp; Boxes', 'Rs. 4,800 - 6,200', 'Velvet wrapped cylinder, acrylic dome, preserved roses, hidden smooth-glide compartment.', 'Optional add-ons: custom perfume bottle slot, silver necklace with engraved Urdu name tag.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Velvet%20Rose%20Dome.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Velvet%20Rose%20Dome%20Box." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 12: Handcrafted Floral Scrapbook -->
+<div class="product-item flex flex-col bg-surface-container-lowest rounded-3xl p-4 shadow-md hover:shadow-xl transition-all duration-300 group" data-bestseller="0" data-category="frames-boxes" data-featured="0" data-price="3600">
+<div class="relative w-full h-80 rounded-[120px_120px_20px_20px] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal fabric-bound handmade scrapbook memory album with pressed dried Pakistani jasmine and bougainvillea petals on cover, hand-lettered gold foil calligraphy title, textured handmade paper pages tied with raw silk ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqpeV-4u-I6VyfzBoF-T-fKYAdHBnKnINuWSPuMsme8_KIrTI4x1_LMu7a_tb4yRbyG9SK4oQN64Zna38_YIh3Y7t3isfNxsuAYhJNn-_SaJ0xfPZm5uwwcC-bckHOahy0dI72OmqUi58bFisz6cK2q5lUemTIzxqz7cquEbhoIV1dNHo7lVBUQsL-dvkkO_BPSdudkvX3Mo4UxGPL72WnIOznlNPZpDOlxqUX3_4cReKb42DtoU4_dA"/>
+<span class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm">Hand-Bound</span>
+</div>
+<div class="flex flex-col pt-4 pb-2 px-2 flex-grow">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Albums &amp; Papercraft</span>
+<span class="font-label-caps text-label-caps text-tertiary font-semibold">20 Custom Pages</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Floral Linen Memory Scrapbook
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+              Linen cloth-bound hardcover with real pressed florals, 20 thick custom illustrated pages for relationship milestones &amp; notes.
+            </p>
+<div class="flex flex-wrap gap-1.5 my-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ 24 Photo Prints Included</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px]">✓ Custom Title Embroidery</span>
+</div>
+<div class="mt-auto pt-3 flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Estimated Quote</span>
+<span class="font-headline-sm text-lg text-primary font-bold">Rs. 3,600 - 4,400</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-full bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" onclick="openModalPreview('Floral Linen Memory Scrapbook', 'Albums &amp; Papercraft', 'Rs. 3,600 - 4,400', 'Hand-loomed cotton linen cover, 300gsm textured archival paper, real pressed jasmine petals.', 'Custom cover embossing, includes interactive pockets, flip-out cards, and your personal timeline.', 'https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20Inquiring%20about%20the%20Floral%20Scrapbook.')" title="View Details">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<a class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20order%20the%20Floral%20Memory%20Scrapbook." target="_blank">
+<span>WhatsApp</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- No Results State -->
+<div class="hidden flex-col items-center justify-center text-center py-20 px-4" id="no-results-view">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">sentiment_dissatisfied</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No exact match in our standard catalog</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2">
+          Don't worry! 70% of our work is completely custom Pinterest-inspired orders. Send us your inspiration picture directly.
+        </p>
+<a class="mt-6 px-6 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers!%20I%20couldn%27t%20find%20my%20exact%20item%20in%20the%20catalogue.%20Sharing%20a%20photo%20now." target="_blank">
+          Send Inspiration Photo to Artisan
+        </a>
+</div>
+</div>
+</section>
+<!-- Spotlight Feature Breakdown: Bespoke Complete Nikkah Suite -->
+<section class="w-full bg-surface-container-low py-16 px-6 lg:px-margin-lg">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container-lowest rounded-3xl p-8 lg:p-12 shadow-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Image Collage -->
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="relative w-full h-80 lg:h-96 rounded-3xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Complete luxury Pakistani Nikkah bridal ceremony gift hamper suite including customized mirrored pen with ostrich feathers, embroidered ring cushion platter with preserved flowers, crystal doodh pilai glass set, and handmade velvet shagun envelope with Urdu calligraphy, warm romantic candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATHSGJNQhwHhZmAOIgTQLpNu-Ib9Z4ZL0j6-9077odcQxdRR0cTlP7p-IHSGAXsLeBrh-OUStc-GA5i-kP2CrgMprUwaV-NHGaw6FS47PVtbNT8kcqyvO28Q7S04MFynqpuee4SrpdMgbno5Jklh5dzG2P7uM4iF8Ut_SGCK1KfmSq5Swodl8Qq7kIlP3JfkkdRmEohyBL1vMqveLs3k5yO_tyLtFul0tq1X8GHC4fyM9f0fbV92M3mQ"/>
+<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-4 py-1.5 rounded-full font-label-caps text-label-caps text-primary shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">stars</span> All-in-One Ceremony Suite
+              </div>
+</div>
+<!-- Small Micro Badges -->
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 rounded-2xl bg-surface-container text-center">
+<span class="font-label-caps text-[10px] uppercase text-secondary">Step 1</span>
+<p class="font-label-md text-label-md text-on-surface font-medium mt-0.5">Pick Color Palette</p>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container text-center">
+<span class="font-label-caps text-[10px] uppercase text-secondary">Step 2</span>
+<p class="font-label-md text-label-md text-on-surface font-medium mt-0.5">Send Urdu Text</p>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container text-center">
+<span class="font-label-caps text-[10px] uppercase text-secondary">Step 3</span>
+<p class="font-label-md text-label-md text-on-surface font-medium mt-0.5">Studio Crafting</p>
+</div>
+</div>
+</div>
+<!-- Content Description -->
+<div class="lg:col-span-6 flex flex-col gap-4 lg:pl-6">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest font-semibold">Bespoke Atelier Collection</span>
+<h2 class="font-display-lg text-headline-lg lg:text-display-lg text-on-surface leading-tight">
+              The Grand Royal Nikkah Set
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Designed to create breathtaking ceremonial photos and lifelong memories. This handcrafted 4-piece signature bridal box unites all ceremonial essentials in harmonious luxury materials:
+            </p>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface mt-2">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span><strong>Platter &amp; Box:</strong> Velvet padded dual-ring holder framed in preserved baby's breath.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span><strong>Signing Feather Pen:</strong> Ostrich plume pen adorned with engraved bride and groom initials charm.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span><strong>Doodh Pilai Glass:</strong> Crystal chalice wrapped with ivory Austrian pearls and custom Urdu decal.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span><strong>Shagun Lifafa:</strong> Heavy velvet personalized envelope for ceremonial cash gifting.</span>
+</li>
+</ul>
+<div class="mt-4 p-4 rounded-2xl bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">Bundle Savings (4 Items)</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Rs. 7,500 <span class="text-xs line-through text-outline font-normal">Rs. 9,200</span></div>
+</div>
+<a class="px-6 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-2" href="https://wa.me/923414655335?text=Hello%20Mini%20Makers!%20I%20want%20to%20reserve%20The%20Grand%20Royal%20Nikkah%204-Piece%20Set." target="_blank">
+<span>Reserve Set on WhatsApp</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pinterest Custom Orders & FAQ Section -->
+<section class="w-full bg-background py-16 px-6 lg:px-margin-lg">
+<div class="max-w-7xl mx-auto">
+<!-- Pinterest Callout Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Left: Pinterest Custom Step Guide -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-3xl p-8 lg:p-10 shadow-sm flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps mb-4">
+<span class="material-symbols-outlined text-xs">palette</span> Custom Creations
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+              Have a Unique Pinterest Design in Mind?
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+              Found a video on TikTok or a photo on Pinterest that isn't in standard stores? Our artisan studio in Lahore &amp; Pattoki specializes in recreation and customization.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-sm font-bold mb-3">1</span>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Take Screenshot</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Save images, reel links, or Pinterest boards of what you desire.</p>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-sm font-bold mb-3">2</span>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">WhatsApp Chat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Send pictures directly to 0341-4655335 with your event date.</p>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-sm font-bold mb-3">3</span>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Review &amp; Deliver</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">We share real progress videos before bubble-wrap express dispatch.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">call</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase">Direct Studio Line</p>
+<p class="font-body-md text-body-md text-on-surface font-bold">+92 341 4655335</p>
+</div>
+</div>
+<a class="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2" href="https://wa.me/923414655335?text=Hi%20Mini%20Makers!%20I%20have%20a%20Pinterest%20screenshot%20I%20would%20love%20to%20get%20made." target="_blank">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Send Reference Photo</span>
+</a>
+</div>
+</div>
+<!-- Right: Pakistan Delivery & Safe Shipping Details -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-3xl p-8 lg:p-10 shadow-sm flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps mb-4">
+<span class="material-symbols-outlined text-xs">local_shipping</span> Delivery Times &amp; Packaging
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Safe Delivery Nationwide
+            </h3>
+<div class="space-y-4 mt-6">
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">near_me</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Lahore &amp; Pattoki Region</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Same-day rider pick up available once crafted, or standard 24-48 hours delivery.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">flight_takeoff</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Karachi, Islamabad, Rawalpindi &amp; All Pakistan</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 to 5 business days via trusted couriers (TCS / Trax) with active tracking.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">shield</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Zero-Breakage Packaging</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every glass chalice &amp; frame is individually insulated in double-layer air bubble foil &amp; corrugated shock boxes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<span class="font-italic-accent text-italic-accent text-primary">پورا پاکستان محفوظ ڈیلیوری</span>
+</div>
+</div>
+</div>
+<!-- Quick FAQs Accordion -->
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-8">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Helpful Questions</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Catalogue &amp; Order Questions</h2>
+</div>
+<div class="space-y-3" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="faq-item rounded-2xl bg-surface-container-low transition-colors overflow-hidden">
+<button class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline-sm text-base text-on-surface" onclick="toggleFaq(this)" type="button">
+<span>Why don't you have a standard "Add to Cart" button?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 pt-0 font-body-md text-body-md text-on-surface-variant">
+              Because Mini Makers does not mass manufacture anything. Every wedding platter, bouquet stem count, and personalized pen requires your specific name spellings, Urdu preferences, and color palette. Chatting directly on WhatsApp guarantees you get exactly what you envision without sizing errors.
+            </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded-2xl bg-surface-container-low transition-colors overflow-hidden">
+<button class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline-sm text-base text-on-surface" onclick="toggleFaq(this)" type="button">
+<span>How much advance notice is required for wedding platters?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 pt-0 font-body-md text-body-md text-on-surface-variant">
+              We recommend ordering 5 to 7 days before your Baraat, Nikkah, or Mehndi event. However, for urgent rush orders in Lahore &amp; Pattoki, express crafting within 48 hours is possible depending on current workshop queue.
+            </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded-2xl bg-surface-container-low transition-colors overflow-hidden">
+<button class="w-full p-5 text-left flex items-center justify-between gap-4 font-headline-sm text-base text-on-surface" onclick="toggleFaq(this)" type="button">
+<span>What payment methods do you accept?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-5 pb-5 pt-0 font-body-md text-body-md text-on-surface-variant">
+              We accept Bank Transfer (Meezan Bank / HBL / Alfalah), JazzCash, and EasyPaisa. Because each order is custom-carved or personalized, a 50% advance deposit confirms your crafting slot, with the balance upon video approval or COD where applicable.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Product Detail Modal / Inspo Specs Drawer -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4 overflow-y-auto" id="product-detail-modal">
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-2xl my-8">
+<!-- Close Button -->
+<button class="absolute top-5 right-5 w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeModalPreview()" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="flex flex-col gap-4">
+<!-- Category & Title -->
+<div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider font-semibold" id="modal-category">Category</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1" id="modal-title">Item Title</h2>
+<div class="font-headline-sm text-xl text-primary font-bold mt-1" id="modal-price">Price</div>
+</div>
+<!-- Materials & Crafting Specs -->
+<div class="p-4 rounded-2xl bg-surface-container-low">
+<h3 class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-primary text-base">architecture</span> Materials &amp; Construction
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modal-materials">Specs text...</p>
+</div>
+<!-- Customization Possibilities -->
+<div class="p-4 rounded-2xl bg-surface-container-low">
+<h3 class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-primary text-base">tune</span> Personalization Options
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modal-customization">Customization text...</p>
+</div>
+<!-- Direct WhatsApp CTA -->
+<div class="pt-4 flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:flex-1 py-3 px-6 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-md" href="#" id="modal-wa-btn" target="_blank">
+<span class="material-symbols-outlined text-base">chat</span>
+<span>Order / Customize on WhatsApp</span>
+</a>
+<button class="w-full sm:w-auto px-6 py-3 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="closeModalPreview()" type="button">
+            Back to Browse
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Filter & Modal Logic -->
+<script>
+    function filterByCategory(cat, btn) {
+      // Update Tab Pill styles
+      const pills = document.querySelectorAll('#category-pills .category-btn');
+      pills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active');
+        p.classList.add('bg-surface-container', 'text-secondary');
+      });
+      btn.classList.remove('bg-surface-container', 'text-secondary');
+      btn.classList.add('bg-primary', 'text-on-primary', 'active');
+
+      // Filter grid
+      const cards = document.querySelectorAll('#product-grid .product-item');
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (cat === 'all' || itemCat === cat) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      checkNoResults(visibleCount);
+    }
+
+    function filterCatalogueProducts() {
+      const query = document.getElementById('catalogue-search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('#product-grid .product-item');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      checkNoResults(visibleCount);
+    }
+
+    function quickFilterKeyword(word) {
+      const input = document.getElementById('catalogue-search-input');
+      input.value = word;
+      filterCatalogueProducts();
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function clearSearch() {
+      document.getElementById('catalogue-search-input').value = '';
+      filterCatalogueProducts();
+    }
+
+    function sortCatalogue(criteria) {
+      const grid = document.getElementById('product-grid');
+      const cards = Array.from(grid.querySelectorAll('.product-item'));
+
+      cards.sort((a, b) => {
+        if (criteria === 'price-asc') {
+          return parseInt(a.getAttribute('data-price') || '0') - parseInt(b.getAttribute('data-price') || '0');
+        } else if (criteria === 'bestseller') {
+          return parseInt(b.getAttribute('data-bestseller') || '0') - parseInt(a.getAttribute('data-bestseller') || '0');
+        } else if (criteria === 'luxury') {
+          return parseInt(b.getAttribute('data-price') || '0') - parseInt(a.getAttribute('data-price') || '0');
+        } else {
+          return parseInt(b.getAttribute('data-featured') || '0') - parseInt(a.getAttribute('data-featured') || '0');
+        }
+      });
+
+      cards.forEach(c => grid.appendChild(c));
+    }
+
+    function checkNoResults(count) {
+      const noResults = document.getElementById('no-results-view');
+      if (count === 0) {
+        noResults.classList.remove('hidden');
+        noResults.classList.add('flex');
+      } else {
+        noResults.classList.add('hidden');
+        noResults.classList.remove('flex');
+      }
+    }
+
+    function openModalPreview(title, category, price, materials, customization, waUrl) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-category').textContent = category;
+      document.getElementById('modal-price').textContent = price;
+      document.getElementById('modal-materials').textContent = materials;
+      document.getElementById('modal-customization').textContent = customization;
+      document.getElementById('modal-wa-btn').setAttribute('href', waUrl);
+      
+      const modal = document.getElementById('product-detail-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModalPreview() {
+      const modal = document.getElementById('product-detail-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isExpanded = !content.classList.contains('hidden');
+      
+      if (isExpanded) {
+        content.classList.add('hidden');
+        icon.textContent = 'expand_more';
+      } else {
+        content.classList.remove('hidden');
+        icon.textContent = 'expand_less';
+      }
+    }
+
+    // Close modal on click backdrop
+    document.getElementById('product-detail-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModalPreview();
+      }
+    });
+  </script>
+</div></main><aside class="fixed bottom-6 right-6 z-40"><a class="flex items-center gap-3 bg-primary text-on-primary pl-4 pr-5 py-3 rounded-full shadow-[0_12px_32px_rgba(181,68,110,0.25)] hover:shadow-[0_16px_36px_rgba(181,68,110,0.35)] hover:bg-primary-container transition-all duration-300 group" href="https://wa.me/923414655335" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary-fixed"></span></span><span class="material-symbols-outlined text-lg group-hover:rotate-12 transition-transform">mark_chat_unread</span><div class="flex flex-col text-left leading-none"><span class="font-label-md text-label-md font-semibold">Chat with us</span><span class="font-label-caps text-[10px] opacity-90 tracking-wide mt-0.5">Order Enquiry</span></div></a></aside><footer class="w-full bg-surface-container-low pt-space-xl pb-margin border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-margin-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-space-lg"><div class="flex flex-col gap-3"><div class="flex items-center gap-3"><img alt="Mini Makers Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqiukEA4KtHxTae5k__0yCI06_1xFYTXuOWYgE8Wnk9qdw67g6j48ernAdt5ac1OGoDe5M0kI-XGPc3wMkSZ_Oo39XmRlp8GMbe8N36mpxcoNFrvkrBOuYtf0L5-FkDtmV1kRiHNcyHI68WqXz7KLAr277iwPDs5J6JRvkuSFWzyzu2rl1GyI2WvnaWvMYU5BZ__dgDTCo-28bjDmyYqN0Y-ZSAfadjJHbxktU7rxyLyTWVn2eFXI5Q"/><span class="font-headline-sm text-headline-sm text-primary">Mini Makers</span></div><p class="font-italic-accent text-italic-accent text-primary leading-snug">Crafted with Love, Made for Memories</p><p class="font-body-sm text-body-sm text-on-surface-variant">Every product is handmade with love, just for you. ہر تحفہ خاص آپ کے لیے</p><div class="flex items-center gap-2 mt-2 text-primary font-label-caps text-label-caps"><span class="material-symbols-outlined text-sm">favorite</span><span>Artisan Studio Lahore &amp; Pattoki</span></div></div><div class="flex flex-col gap-3"><h3 class="font-headline-sm text-base text-on-surface font-semibold">Boutique Collections</h3><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-primary transition-colors"><a href="#">Celebration &amp; Gift Boxes</a></li><li class="hover:text-primary transition-colors"><a href="#">Wedding Special Nikah Platters</a></li><li class="hover:text-primary transition-colors"><a href="#">Customized Keepsake Frames</a></li><li class="hover:text-primary transition-colors"><a href="#">How Custom Orders Work</a></li><li class="hover:text-primary transition-colors"><a href="#">Frequently Asked Questions</a></li></ul></div><div class="flex flex-col gap-3"><h3 class="font-headline-sm text-base text-on-surface font-semibold">Studio &amp; Inquiries</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Boutique Studio: Lahore &amp; Pattoki, Punjab, Pakistan</p><div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="tel:03414655335">Contact: 0341-4655335</a><a class="hover:text-primary transition-colors" href="https://wa.me/923414655335">WhatsApp: +92 341 4655335</a><a class="hover:text-primary transition-colors" href="mailto:hello@minimakers.pk">Email: hello@minimakers.pk</a></div></div><div class="flex flex-col gap-3"><h3 class="font-headline-sm text-base text-on-surface font-semibold">Follow Our Journey</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Get custom gift ideas &amp; holiday reservation reminders.</p><div class="flex items-center gap-3"><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://instagram.com/minimakers4" title="Instagram"><span class="material-symbols-outlined text-sm">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://tiktok.com/@minimakers_4" title="TikTok"><span class="material-symbols-outlined text-sm">music_note</span></a><a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://facebook.com" title="Facebook"><span class="material-symbols-outlined text-sm">public</span></a></div><div class="mt-2"><div class="flex items-center rounded-full bg-surface-container-lowest p-1 shadow-sm"><input class="bg-transparent px-3 py-1 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-full" placeholder="Your email address..." type="email"/><button class="bg-primary-container text-on-primary font-label-caps text-label-caps px-3 py-1.5 rounded-full hover:bg-primary transition-colors" type="button">Join</button></div></div></div></div><div class="pt-space-md border-t border-outline-variant/30 text-center"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Mini Makers • Handcrafted with love in Pakistan. Not a cart shop — all customized orders confirmed directly on WhatsApp &amp; Instagram DM.</p></div></div></footer></body></html>
