@@ -53,6 +53,7 @@ export interface Review {
   productName: string;
   verifiedWhatsApp: boolean;
   chatSnippet?: string;
+  image?: string;
 }
 
 export interface FaqItem {
