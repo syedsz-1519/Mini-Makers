@@ -32,14 +32,28 @@ export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
             <span className="font-semibold text-[#B03A63]">Happy Customers &amp; Gallery</span>
           </nav>
 
-          <span className="text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-1.5 text-[#B03A63]">
-            <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
-            <span>Customer Love &amp; Trust · Lahore | Pattoki</span>
-          </span>
+          {/* Script-style gold eyebrow with review SVG */}
+          <div className="flex items-center justify-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+            <img
+              src="/assets/icons/headings/review-heading.svg"
+              alt=""
+              className="w-7 h-7 inline-block object-contain"
+            />
+            <span>customer love &amp; trust</span>
+          </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-2 mb-3 text-[#3A2A30]">
-            Words From Our Mini Makers Family
+          <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-2 text-[#3A2A30]">
+            Words From Our Mini Makers <span className="highlight-marker">Family</span>
           </h1>
+
+          {/* Floral decorative divider */}
+          <div className="flex items-center justify-center my-3" aria-hidden="true">
+            <img
+              src="/assets/icons/headings/divider-ornament.svg"
+              alt=""
+              className="h-5 w-auto max-w-[220px] opacity-80"
+            />
+          </div>
 
           {/* Star Rating Summary */}
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -63,13 +77,24 @@ export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
         {/* SECTION 1: WhatsApp-Style Review Chat Cards */}
         <section className="mb-20">
           <div className="mb-8">
-            <span className="text-xs uppercase font-bold tracking-widest text-emerald-700 flex items-center gap-1.5">
-              <CheckCheck className="w-4 h-4" />
-              <span>Verified WhatsApp Feedback</span>
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold mt-1 text-[#3A2A30]">
-              Direct From Customer WhatsApp Chats
+            <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+              <img
+                src="/assets/icons/headings/review-heading.svg"
+                alt=""
+                className="w-6 h-6 inline-block object-contain"
+              />
+              <span>verified feedback</span>
+            </div>
+            <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
+              Direct From Customer <span className="highlight-marker">WhatsApp Chats</span>
             </h2>
+            <div className="flex items-center my-3" aria-hidden="true">
+              <img
+                src="/assets/icons/headings/divider-ornament.svg"
+                alt=""
+                className="h-4 w-auto max-w-[200px] opacity-80"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -127,13 +152,24 @@ export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
         <section className="mb-20">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
-              <span className="text-xs uppercase font-bold tracking-widest text-[#B03A63] flex items-center gap-1.5">
-                <Instagram className="w-4 h-4" />
-                <span>Join Our 1.2K+ Instagram Community</span>
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold mt-1 text-[#3A2A30]">
-                From Our Instagram Feed
+              <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/about-heart-heading.svg"
+                  alt=""
+                  className="w-6 h-6 inline-block object-contain"
+                />
+                <span>join our 1.2k+ community</span>
+              </div>
+              <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
+                From Our <span className="highlight-marker">Instagram Feed</span>
               </h2>
+              <div className="flex items-center my-2" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-4 w-auto max-w-[180px] opacity-80"
+                />
+              </div>
               <p className="text-xs text-[#3A2A30]/75 mt-1">
                 Behind-the-scenes crafting videos, reel highlights, and customer unboxing stories.
               </p>

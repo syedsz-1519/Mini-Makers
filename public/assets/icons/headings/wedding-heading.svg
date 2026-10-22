@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Wedding Rings & Sparkles in Rose Pink & Gold -->
+  <!-- Left Ring -->
+  <ellipse cx="19" cy="27" rx="10" ry="11" stroke="#C9A66B" stroke-width="2.2" fill="#FFF8F3" fill-opacity="0.2"/>
+  <!-- Diamond on left ring -->
+  <path d="M19 13L21.5 16H16.5L19 13Z" stroke="#B03A63" fill="#F4B6C6"/>
+  <!-- Right Ring (intertwining) -->
+  <ellipse cx="29" cy="25" rx="10" ry="11" stroke="#B03A63" stroke-width="2.2" fill="none"/>
+  <!-- Highlights & Sparkles -->
+  <path d="M29 11L30 13L32 14L30 15L29 17L28 15L26 14L28 13Z" fill="#C9A66B"/>
+  <path d="M8 20L9 21.5L10.5 22.5L9 23.5L8 25L7 23.5L5.5 22.5L7 21.5Z" fill="#C9A66B"/>
+  <path d="M41 28L42 29.5L43.5 30.5L42 31.5L41 33L40 31.5L38.5 30.5L40 29.5Z" fill="#B03A63"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Butterfly hair pin -->
+  <!-- Pin Needle -->
+  <line x1="24" y1="26" x2="24" y2="44" stroke="#C9A66B" stroke-width="2.2"/>
+  <circle cx="24" cy="44" r="1.5" fill="#C9A66B"/>
+  <!-- Butterfly Wings -->
+  <!-- Top Left Wing -->
+  <path d="M23 20C17 12 10 14 12 21C14 24 20 22 23 22" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.5"/>
+  <!-- Top Right Wing -->
+  <path d="M25 20C31 12 38 14 36 21C34 24 28 22 25 22" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.5"/>
+  <!-- Bottom Left Wing -->
+  <path d="M23 23C18 24 14 28 17 31C19 33 22 28 23 25" stroke="#B03A63" fill="#FBE4EA"/>
+  <!-- Bottom Right Wing -->
+  <path d="M25 23C30 24 34 28 31 31C29 33 26 28 25 25" stroke="#B03A63" fill="#FBE4EA"/>
+  <!-- Antennae -->
+  <path d="M23 18C21 14 18 13 17 14" stroke="#C9A66B"/>
+  <path d="M25 18C27 14 30 13 31 14" stroke="#C9A66B"/>
+  <circle cx="17" cy="14" r="1" fill="#C9A66B"/>
+  <circle cx="31" cy="14" r="1" fill="#C9A66B"/>
+  <!-- Butterfly Body / Pearl -->
+  <ellipse cx="24" cy="22" rx="2" ry="4" stroke="#B03A63" fill="#C9A66B"/>
+  <!-- Sparkles -->
+  <path d="M8 8L9 9.5L10.5 10.5L9 11.5L8 13L7 11.5L5.5 10.5L7 9.5Z" fill="#C9A66B"/>
+  <path d="M39 7L40 8.5L41.5 9.5L40 10.5L39 12L38 10.5L36.5 9.5L38 8.5Z" fill="#B03A63"/>
+</svg>

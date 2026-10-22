@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Heart made of thread / needle -->
+  <!-- Needle -->
+  <line x1="10" y1="38" x2="22" y2="26" stroke="#C9A66B" stroke-width="2.2"/>
+  <!-- Needle eye -->
+  <ellipse cx="12" cy="36" rx="1" ry="2" stroke="#B03A63" fill="#FFF8F3"/>
+  <!-- Thread winding into Heart shape -->
+  <path d="M13 37Q16 42 22 40Q26 38 24 33C24 33 24 24 24 21C22 17 16 17 16 22C16 28 24 34 24 34C24 34 32 28 32 22C32 17 26 17 24 21" stroke="#B03A63" stroke-width="2" stroke-dasharray="0 0" fill="#FBE4EA" fill-opacity="0.3"/>
+  <!-- Looping thread tail -->
+  <path d="M24 34Q27 40 34 38Q39 36 37 30Q35 25 38 22" stroke="#C9A66B" stroke-dasharray="1.5 2"/>
+  <!-- Sparkles -->
+  <path d="M24 6L25 8L27 9L25 10L24 12L23 10L21 9L23 8Z" fill="#C9A66B"/>
+  <path d="M41 12L42 13.5L43.5 14.5L42 15.5L41 17L40 15.5L38.5 14.5L40 13.5Z" fill="#B03A63"/>
+</svg>

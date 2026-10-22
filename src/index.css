@@ -51,3 +51,105 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(176, 58, 99, 0.45);
 }
+
+/* Fluid Heading Typography */
+.fluid-h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.15;
+}
+
+.fluid-h2 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.25;
+}
+
+/* Boutique Hand-Drawn / Illustrated Heading Effects */
+.highlight-marker {
+  position: relative;
+  display: inline-block;
+  color: #B03A63;
+  z-index: 1;
+}
+
+.highlight-marker::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 4px;
+  height: 42%;
+  background: #FBE4EA;
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(-1.2deg);
+}
+
+.brush-underline {
+  position: relative;
+  display: inline-block;
+  color: #B03A63;
+}
+
+.brush-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, #B03A63 20%, #F4B6C6 80%, transparent 100%);
+  border-radius: 9999px;
+}
+
+/* Subtle Floating Animations for Petals, Sparkles, and Dots */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(3deg);
+  }
+}
+
+@keyframes float-gentle-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-3deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-gentle-reverse 5.2s ease-in-out infinite;
+}
+
+/* Stepper Pulsing Rose Ring */
+@keyframes pulse-rose-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 182, 198, 0.85);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(244, 182, 198, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 182, 198, 0);
+  }
+}
+
+.pulsing-rose-ring {
+  animation: pulse-rose-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-reverse,
+  .pulsing-rose-ring {
+    animation: none !important;
+  }
+}

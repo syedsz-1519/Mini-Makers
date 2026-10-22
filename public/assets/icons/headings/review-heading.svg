@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Stars and a speech bubble -->
+  <!-- Speech Bubble -->
+  <path d="M10 14C10 10.686 13.582 8 18 8H30C34.418 8 38 10.686 38 14V26C38 29.314 34.418 32 30 32H20L13 38V32H10C5.582 32 2 29.314 2 26V20" stroke="#B03A63" fill="#FFF8F3"/>
+  <!-- Heart in bubble -->
+  <path d="M24 16C22.5 14 20 14 20 16.5C20 19 24 22 24 22C24 22 28 19 28 16.5C28 14 25.5 14 24 16Z" stroke="#B03A63" fill="#F4B6C6"/>
+  <!-- Stars -->
+  <!-- Top Gold Star -->
+  <path d="M38 7L39 9L41 9.5L39.5 11L40 13L38 12L36 13L36.5 11L35 9.5L37 9Z" fill="#C9A66B" stroke="#C9A66B" stroke-width="0.5"/>
+  <!-- Middle Star -->
+  <path d="M42 20L43 21.5L44.5 22L43.2 23.2L43.5 24.8L42 24L40.5 24.8L40.8 23.2L39.5 22L41 21.5Z" fill="#C9A66B" stroke="#C9A66B" stroke-width="0.5"/>
+  <!-- Small Star -->
+  <path d="M7 6L7.8 7.5L9.5 8L8.2 9.2L8.5 10.8L7 10L5.5 10.8L5.8 9.2L4.5 8L6.2 7.5Z" fill="#C9A66B" stroke="#C9A66B" stroke-width="0.5"/>
+</svg>

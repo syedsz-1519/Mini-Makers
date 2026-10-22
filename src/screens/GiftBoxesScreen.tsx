@@ -57,14 +57,30 @@ export const GiftBoxesScreen: React.FC<GiftBoxesScreenProps> = ({
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <span className="text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 text-[#B03A63]">
-                <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
-                <span>Sweet Treats &amp; Surprises · Lahore | Pattoki</span>
-              </span>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-1 text-[#3A2A30]">
-                Specialty Gift Boxes &amp; Hampers
+              {/* Script-style gold eyebrow with giftbox SVG */}
+              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/giftbox-heading.svg"
+                  alt=""
+                  className="w-7 h-7 inline-block object-contain"
+                />
+                <span>sweet treats &amp; keepsakes</span>
+              </div>
+
+              <h1 className="font-serif italic font-bold tracking-tight fluid-h1 text-[#3A2A30]">
+                Specialty <span className="highlight-marker">Gift Boxes</span> &amp; Hampers
               </h1>
-              <p className="text-sm text-[#3A2A30]/80 mt-2 max-w-xl">
+
+              {/* Floral decorative divider */}
+              <div className="flex items-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-5 w-auto max-w-[200px] opacity-80"
+                />
+              </div>
+
+              <p className="text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
                 Whimsical alphabet letter snack crates, smashable surprise piñatas, hand-folded scrapbooks, and personalized calligraphy mugs made to ignite pure delight.
               </p>
             </div>

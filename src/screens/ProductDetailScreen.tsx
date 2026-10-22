@@ -429,9 +429,26 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <div className="mt-16 pt-10 border-t border-[#F4B6C6]/40">
-            <h3 className="font-serif text-2xl font-bold mb-6 text-[#3A2A30]">
-              You May Also Adore
-            </h3>
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/about-heart-heading.svg"
+                  alt=""
+                  className="w-6 h-6 inline-block object-contain"
+                />
+                <span>handpicked pairings</span>
+              </div>
+              <h3 className="font-serif italic text-2xl font-bold text-[#3A2A30]">
+                You May Also <span className="highlight-marker">Adore</span>
+              </h3>
+              <div className="flex items-center my-2" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-4 w-auto max-w-[180px] opacity-80"
+                />
+              </div>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {relatedProducts.map((rel) => (
                 <div

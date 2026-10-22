@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="240" height="24">
+  <!-- Thin line left -->
+  <line x1="10" y1="12" x2="80" y2="12" stroke="#C9A66B" stroke-opacity="0.6"/>
+  <!-- Left Small Diamond -->
+  <path d="M88 12L94 8L100 12L94 16Z" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.7"/>
+  <!-- Connecting line -->
+  <line x1="102" y1="12" x2="110" y2="12" stroke="#C9A66B"/>
+  
+  <!-- Center Flower Motif -->
+  <!-- Center Petals in cross -->
+  <ellipse cx="120" cy="8.5" rx="2.5" ry="3.5" stroke="#B03A63" fill="#FBE4EA"/>
+  <ellipse cx="120" cy="15.5" rx="2.5" ry="3.5" stroke="#B03A63" fill="#FBE4EA"/>
+  <ellipse cx="113" cy="12" rx="3.5" ry="2.5" stroke="#B03A63" fill="#FBE4EA"/>
+  <ellipse cx="127" cy="12" rx="3.5" ry="2.5" stroke="#B03A63" fill="#FBE4EA"/>
+  <!-- Center core dot -->
+  <circle cx="120" cy="12" r="2.2" stroke="#C9A66B" fill="#C9A66B"/>
+
+  <!-- Connecting line -->
+  <line x1="130" y1="12" x2="138" y2="12" stroke="#C9A66B"/>
+  <!-- Right Small Diamond -->
+  <path d="M140 12L146 8L152 12L146 16Z" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.7"/>
+  <!-- Thin line right -->
+  <line x1="160" y1="12" x2="230" y2="12" stroke="#C9A66B" stroke-opacity="0.6"/>
+</svg>

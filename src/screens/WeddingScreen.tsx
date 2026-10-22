@@ -38,14 +38,28 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 bg-white text-[#B03A63] border border-[#F4B6C6] shadow-xs">
-                <Crown className="w-3.5 h-3.5 text-[#C9A66B]" />
-                <span>Royal Bridal &amp; Nikkah Atelier</span>
+              {/* Script-style gold eyebrow with wedding SVG */}
+              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/wedding-heading.svg"
+                  alt=""
+                  className="w-7 h-7 inline-block object-contain"
+                />
+                <span>royal bridal &amp; nikkah keepsakes</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-[#3A2A30]">
-                Make Your <span className="italic font-normal text-[#B03A63]">Shadi</span> Extra Special
+              <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-3 text-[#3A2A30]">
+                Make Your <span className="highlight-marker">Shadi</span> Extra Special
               </h1>
+
+              {/* Floral decorative divider */}
+              <div className="flex items-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-5 w-auto max-w-[200px] opacity-80"
+                />
+              </div>
 
               <div className="flex items-center gap-2 text-sm italic font-serif text-[#C9A66B] font-semibold mb-4">
                 <span>Traditional Artisanship for Barat, Mayun, Mehndi &amp; Nikkah Celebrations</span>

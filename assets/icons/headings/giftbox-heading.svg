@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Gift box with bow -->
+  <!-- Box Base -->
+  <rect x="10" y="22" width="28" height="20" rx="3" stroke="#B03A63" fill="#FFF8F3"/>
+  <!-- Box Lid -->
+  <rect x="8" y="17" width="32" height="6" rx="2" stroke="#B03A63" fill="#FBE4EA"/>
+  <!-- Vertical Ribbon -->
+  <line x1="24" y1="17" x2="24" y2="42" stroke="#C9A66B" stroke-width="2.5"/>
+  <!-- Bow Loops -->
+  <path d="M24 17C21 12 14 11 16 16C18 19 22 17 24 17Z" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.6"/>
+  <path d="M24 17C27 12 34 11 32 16C30 19 26 17 24 17Z" stroke="#B03A63" fill="#F4B6C6" fill-opacity="0.6"/>
+  <!-- Bow knot -->
+  <circle cx="24" cy="17" r="2" fill="#C9A66B"/>
+  <!-- Floating sparkles -->
+  <path d="M6 10L7 11.5L8.5 12.5L7 13.5L6 15L5 13.5L3.5 12.5L5 11.5Z" fill="#C9A66B"/>
+  <path d="M40 8L41 10L43 11L41 12L40 14L39 12L37 11L39 10Z" fill="#B03A63"/>
+</svg>

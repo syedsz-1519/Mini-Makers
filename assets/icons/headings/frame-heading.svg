@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Photo frame with a tiny heart -->
+  <!-- Outer frame -->
+  <rect x="10" y="8" width="28" height="32" rx="3" stroke="#B03A63" fill="#FFF8F3"/>
+  <!-- Inner mat border -->
+  <rect x="15" y="13" width="18" height="22" rx="1.5" stroke="#C9A66B" stroke-dasharray="1 1" fill="#FBE4EA" fill-opacity="0.4"/>
+  <!-- Tiny heart in center -->
+  <path d="M24 21C22.5 19 20 19 20 21.5C20 24 24 26 24 26C24 26 28 24 28 21.5C28 19 25.5 19 24 21Z" stroke="#B03A63" fill="#B03A63"/>
+  <!-- Stand / base -->
+  <line x1="8" y1="42" x2="40" y2="42" stroke="#C9A66B" stroke-width="2"/>
+  <!-- Sparkles -->
+  <path d="M6 12L7 13.5L8.5 14.5L7 15.5L6 17L5 15.5L3.5 14.5L5 13.5Z" fill="#C9A66B"/>
+  <path d="M41 20L42 21.5L43.5 22.5L42 23.5L41 25L40 23.5L38.5 22.5L40 21.5Z" fill="#B03A63"/>
+</svg>

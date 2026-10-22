@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { BRAND, CATEGORIES, PRODUCTS } from '../data/catalog';
 import { Product } from '../types';
+import { IllustratedHeading } from '../components/IllustratedHeading';
 
 interface HomeScreenProps {
   onNavigate: (screen: string) => void;
@@ -66,17 +67,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] mb-4 text-[#3A2A30]">
+            <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-4 text-[#3A2A30]">
               Crafted with{' '}
-              <span className="italic font-normal text-[#B03A63]">
-                Love
-              </span>
-              ,<br />
+              <span className="text-[#C9A66B]">Love</span>,<br />
               Made for{' '}
-              <span className="italic font-normal text-[#C9A66B]">
-                Memories
-              </span>
+              <span className="highlight-marker">Memories</span>
             </h1>
+
+            {/* Floral decorative divider */}
+            <div className="flex items-center mb-5" aria-hidden="true">
+              <img
+                src="/assets/icons/headings/divider-ornament.svg"
+                alt=""
+                className="h-5 w-auto max-w-[200px] opacity-80"
+              />
+            </div>
 
             {/* Poetic Secondary Line Banner */}
             <div className="flex items-center gap-2.5 px-4 py-2 rounded-full mb-5 border border-[#F4B6C6]/60 bg-white text-[#3A2A30] shadow-xs">
@@ -234,13 +239,26 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-1.5 text-[#B03A63]">
-              <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
-              <span>Explore Our Punjab Atelier</span>
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-2 mb-3 text-[#3A2A30]">
-              Gifts for Every Occasion
+            <div className="flex items-center justify-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+              <img
+                src="/assets/icons/headings/giftbox-heading.svg"
+                alt=""
+                className="w-7 h-7 inline-block object-contain"
+              />
+              <span>our collection</span>
+            </div>
+            <h2 className="font-serif italic text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-2 mb-2 text-[#3A2A30]">
+              Gifts for <span className="highlight-marker">Every Occasion</span>
             </h2>
+
+            {/* Floral decorative divider */}
+            <div className="flex items-center justify-center my-3" aria-hidden="true">
+              <img
+                src="/assets/icons/headings/divider-ornament.svg"
+                alt=""
+                className="h-5 w-auto max-w-[220px] opacity-80"
+              />
+            </div>
             <p className="text-sm text-[#3A2A30]/80 leading-relaxed">
               Thoughtfully hand-stitched, sculpted, and personalized in our Lahore | Pattoki workshops. Click any category to browse or customize with your colors.
             </p>
@@ -328,14 +346,18 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="mt-10 p-5 rounded-2xl border border-[#C9A66B]/50 bg-white flex flex-col md:flex-row items-center justify-between gap-4 shadow-xs">
             <div className="flex items-center gap-4 text-center md:text-left">
               <div className="w-12 h-12 rounded-full bg-[#FBE4EA] text-[#B03A63] flex items-center justify-center shrink-0">
-                <Sparkles className="w-6 h-6 text-[#C9A66B]" />
+                <img
+                  src="/assets/icons/headings/accessory-heading.svg"
+                  alt=""
+                  className="w-7 h-7 object-contain"
+                />
               </div>
               <div>
                 <span className="text-xs uppercase font-bold tracking-widest text-[#C9A66B]">
                   Dainty Embellishments
                 </span>
-                <h4 className="font-serif text-lg font-bold text-[#3A2A30]">
-                  Handmade Accessories &amp; Gota Hair Pins
+                <h4 className="font-serif italic text-lg font-bold text-[#3A2A30]">
+                  Handmade Accessories &amp; <span className="highlight-marker">Gota Pins</span>
                 </h4>
                 <p className="text-xs text-[#3A2A30]/80">
                   Pearl wrist corsages, silk scrunchies, and custom hair brooches for bridal squads.
@@ -357,12 +379,24 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="mt-16">
             <div className="flex flex-col sm:flex-row items-baseline justify-between mb-8">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#B03A63]">
-                  Staff Picks
-                </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold mt-1 text-[#3A2A30]">
-                  Signature Personalized Pieces
+                <div className="flex items-center gap-2 mb-1 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                  <img
+                    src="/assets/icons/headings/about-heart-heading.svg"
+                    alt=""
+                    className="w-6 h-6 inline-block object-contain"
+                  />
+                  <span>artisan craft</span>
+                </div>
+                <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
+                  Signature <span className="highlight-marker">Personalized Pieces</span>
                 </h3>
+                <div className="flex items-center my-2" aria-hidden="true">
+                  <img
+                    src="/assets/icons/headings/divider-ornament.svg"
+                    alt=""
+                    className="h-4 w-auto max-w-[180px] opacity-80"
+                  />
+                </div>
               </div>
               <button
                 onClick={() => onNavigate('bouquets')}

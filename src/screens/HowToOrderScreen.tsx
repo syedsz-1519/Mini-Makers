@@ -38,16 +38,30 @@ export const HowToOrderScreen: React.FC<HowToOrderScreenProps> = ({
             <span className="font-semibold text-[#B03A63]">How to Order</span>
           </nav>
 
-          <span className="text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-1.5 text-[#B03A63]">
-            <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
-            <span>Simple 6-Step Artisan Process · Lahore | Pattoki</span>
-          </span>
+          {/* Script-style gold eyebrow with order path SVG */}
+          <div className="flex items-center justify-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+            <img
+              src="/assets/icons/headings/order-path-heading.svg"
+              alt=""
+              className="w-7 h-7 inline-block object-contain"
+            />
+            <span>our simple process</span>
+          </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-2 mb-4 text-[#3A2A30]">
-            How to Order from Mini Makers
+          <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-2 text-[#3A2A30]">
+            How to <span className="highlight-marker">Order</span> from Mini Makers
           </h1>
 
-          <p className="text-sm text-[#3A2A30]/80 leading-relaxed">
+          {/* Floral decorative divider */}
+          <div className="flex items-center justify-center my-3" aria-hidden="true">
+            <img
+              src="/assets/icons/headings/divider-ornament.svg"
+              alt=""
+              className="h-5 w-auto max-w-[220px] opacity-80"
+            />
+          </div>
+
+          <p className="text-sm text-[#3A2A30]/80 leading-relaxed max-w-2xl mx-auto">
             Every creation is bespoke. Here is how our seamless WhatsApp-assisted ordering journey works — from your initial inspiration to safe bubble-wrapped doorstep delivery.
           </p>
         </div>

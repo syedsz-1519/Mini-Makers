@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Woven basket with flowers -->
+  <!-- Handle -->
+  <path d="M16 22C16 12 32 12 32 22" stroke="#C9A66B" stroke-width="2.2"/>
+  <!-- Basket Trapezoid body -->
+  <path d="M12 24L15 40C15.5 41.5 17 42 19 42H29C31 42 32.5 41.5 33 40L36 24H12Z" stroke="#B03A63" fill="#FBE4EA" fill-opacity="0.4"/>
+  <!-- Basket weave lines -->
+  <line x1="13" y1="30" x2="35" y2="30" stroke="#C9A66B"/>
+  <line x1="14" y1="36" x2="34" y2="36" stroke="#C9A66B"/>
+  <line x1="20" y1="24" x2="21" y2="42" stroke="#B03A63" stroke-width="1.5"/>
+  <line x1="27" y1="24" x2="28" y2="42" stroke="#B03A63" stroke-width="1.5"/>
+  <!-- Flowers blooming from basket -->
+  <circle cx="19" cy="20" r="3.5" stroke="#B03A63" fill="#F4B6C6"/>
+  <circle cx="28" cy="19" r="4" stroke="#B03A63" fill="#F4B6C6"/>
+  <circle cx="24" cy="22" r="3" stroke="#C9A66B" fill="#C9A66B"/>
+  <!-- Sparkles -->
+  <path d="M7 16L8 17.5L9.5 18.5L8 19.5L7 21L6 19.5L4.5 18.5L6 17.5Z" fill="#C9A66B"/>
+  <path d="M40 14L41 15.5L42.5 16.5L41 17.5L40 19L39 17.5L37.5 16.5L39 15.5Z" fill="#C9A66B"/>
+</svg>

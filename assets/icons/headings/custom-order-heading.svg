@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+  <!-- Pencil with sparkles -->
+  <!-- Pencil Body angled -->
+  <path d="M12 36L10 42L16 40L36 20L30 14L12 36Z" stroke="#B03A63" fill="#FFF8F3"/>
+  <!-- Pencil tip lead -->
+  <path d="M10 42L12 36L16 40L10 42Z" fill="#C9A66B" stroke="#C9A66B"/>
+  <circle cx="11" cy="41" r="1" fill="#B03A63"/>
+  <!-- Pencil eraser band -->
+  <path d="M30 14L34 10C35.5 8.5 38 8.5 39.5 10C41 11.5 41 14 39.5 15.5L36 20" stroke="#B03A63" fill="#FBE4EA"/>
+  <line x1="32" y1="16" x2="38" y2="22" stroke="#C9A66B"/>
+  <!-- Floating Sparkles -->
+  <path d="M22 8L23 10L25 11L23 12L22 14L21 12L19 11L21 10Z" fill="#C9A66B"/>
+  <path d="M42 26L43 28L45 29L43 30L42 32L41 30L39 29L41 28Z" fill="#C9A66B"/>
+  <path d="M6 20L7 21.5L8.5 22.5L7 23.5L6 25L5 23.5L3.5 22.5L5 21.5Z" fill="#B03A63"/>
+</svg>

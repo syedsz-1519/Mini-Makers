@@ -42,14 +42,30 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <span className="text-xs uppercase tracking-widest font-semibold flex items-center gap-1.5 text-[#B03A63]">
-                <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
-                <span>Punjab Craft Studio · Lahore | Pattoki</span>
-              </span>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-1 text-[#3A2A30]">
-                Keepsake Frames &amp; Woven Baskets
+              {/* Script-style gold eyebrow with frame SVG */}
+              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/frame-heading.svg"
+                  alt=""
+                  className="w-7 h-7 inline-block object-contain"
+                />
+                <span>cherished memories &amp; gifts</span>
+              </div>
+
+              <h1 className="font-serif italic font-bold tracking-tight fluid-h1 text-[#3A2A30]">
+                Keepsake <span className="highlight-marker">Frames &amp; Baskets</span>
               </h1>
-              <p className="text-sm text-[#3A2A30]/80 mt-2 max-w-xl">
+
+              {/* Floral decorative divider */}
+              <div className="flex items-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-5 w-auto max-w-[200px] opacity-80"
+                />
+              </div>
+
+              <p className="text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
                 Cherish sacred milestones with personalized floating frames, handwoven Punjab cane baskets, and handcrafted gota accessories.
               </p>
             </div>
@@ -100,14 +116,24 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
         {activeTab === 'frames' && (
           <section className="space-y-6">
             <div className="text-center max-w-xl mx-auto mb-8">
+              <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/frame-heading.svg"
+                  alt=""
+                  className="w-6 h-6 inline-block object-contain"
+                />
+                <span>archival preservation</span>
+              </div>
               <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
-                Preserve Every Memory in Gold &amp; Glass
+                Preserve Every Memory in <span className="highlight-marker">Gold &amp; Glass</span>
               </h2>
               {/* Decorative Floral / Diamond Divider */}
-              <div className="flex items-center justify-center gap-3 my-3">
-                <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#F4B6C6]" />
-                <Sparkles className="w-4 h-4 text-[#B03A63]" />
-                <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#F4B6C6]" />
+              <div className="flex items-center justify-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-4 w-auto max-w-[200px] opacity-80"
+                />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
                 Nikkah certificates, baby birth announcements, and couple anniversary dates pressed between archival floating panes.
@@ -148,13 +174,23 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
         {activeTab === 'baskets' && (
           <section className="space-y-6">
             <div className="text-center max-w-xl mx-auto mb-8">
+              <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/basket-heading.svg"
+                  alt=""
+                  className="w-6 h-6 inline-block object-contain"
+                />
+                <span>woven with affection</span>
+              </div>
               <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
-                Handwoven Punjab Cane &amp; Treat Baskets
+                Handwoven Punjab Cane &amp; <span className="highlight-marker">Treat Baskets</span>
               </h2>
-              <div className="flex items-center justify-center gap-3 my-3">
-                <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#F4B6C6]" />
-                <Sparkles className="w-4 h-4 text-[#B03A63]" />
-                <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#F4B6C6]" />
+              <div className="flex items-center justify-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-4 w-auto max-w-[200px] opacity-80"
+                />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
                 Snack baskets, newborn welcome hampers, and celebration trays trimmed with satin ribbons and baby’s breath.
@@ -192,13 +228,23 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
         {activeTab === 'accessories' && (
           <section className="space-y-6">
             <div className="text-center max-w-xl mx-auto mb-8">
+              <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
+                <img
+                  src="/assets/icons/headings/accessory-heading.svg"
+                  alt=""
+                  className="w-6 h-6 inline-block object-contain"
+                />
+                <span>dainty wedding adornments</span>
+              </div>
               <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
-                Handcrafted Gota &amp; Pearl Adornments
+                Handcrafted Gota &amp; <span className="highlight-marker">Pearl Adornments</span>
               </h2>
-              <div className="flex items-center justify-center gap-3 my-3">
-                <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#F4B6C6]" />
-                <Sparkles className="w-4 h-4 text-[#B03A63]" />
-                <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#F4B6C6]" />
+              <div className="flex items-center justify-center my-3" aria-hidden="true">
+                <img
+                  src="/assets/icons/headings/divider-ornament.svg"
+                  alt=""
+                  className="h-4 w-auto max-w-[200px] opacity-80"
+                />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
                 Gota flower hair pins, silk scrunchies, and wedding wrist corsages hand-stitched for sisters and brides.
