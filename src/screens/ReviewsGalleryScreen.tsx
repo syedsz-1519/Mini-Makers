@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MessageCircle,
   Instagram,
@@ -9,8 +9,10 @@ import {
   Play,
   Heart,
   MapPin,
+  ZoomIn,
 } from 'lucide-react';
 import { BRAND, REVIEWS, INSTAGRAM_POSTS, STALL_PHOTOS } from '../data/catalog';
+import { ProductLightboxModal } from '../components/ProductLightboxModal';
 
 interface ReviewsGalleryScreenProps {
   onNavigate: (screen: string) => void;
@@ -19,6 +21,11 @@ interface ReviewsGalleryScreenProps {
 export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
   onNavigate,
 }) => {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const stallImages = STALL_PHOTOS.map((s) => s.image);
+
   return (
     <div className="w-full pb-10 sm:pb-16 bg-[#FFF8F3] text-[#3A2A30]">
       {/* Header */}
@@ -236,17 +243,26 @@ export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {STALL_PHOTOS.map((stall) => (
+            {STALL_PHOTOS.map((stall, idx) => (
               <div
                 key={stall.id}
-                className="rounded-2xl overflow-hidden border border-[#F4B6C6]/50 bg-[#FFF8F3] flex flex-col shadow-xs"
+                onClick={() => {
+                  setLightboxIndex(idx);
+                  setIsLightboxOpen(true);
+                }}
+                className="rounded-2xl overflow-hidden border border-[#F4B6C6]/50 bg-[#FFF8F3] flex flex-col shadow-xs cursor-zoom-in group hover:shadow-md transition-all"
+                title="Click to view full-screen photo"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={stall.image}
                     alt={stall.event}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute bottom-2 right-2 px-2.5 py-1 rounded-full bg-white/90 text-[#B03A63] text-[11px] font-semibold border border-[#F4B6C6]/60 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ZoomIn className="w-3 h-3 text-[#B03A63]" />
+                    <span>Zoom</span>
+                  </div>
                 </div>
                 <div className="p-4 flex flex-col flex-1">
                   <span className="text-[10px] font-bold text-[#B03A63] uppercase tracking-wide">
@@ -260,6 +276,15 @@ export const ReviewsGalleryScreen: React.FC<ReviewsGalleryScreenProps> = ({
           </div>
         </section>
       </div>
+
+      {/* Lightbox for Pop-Up Stall Photos */}
+      <ProductLightboxModal
+        isOpen={isLightboxOpen}
+        initialIndex={lightboxIndex}
+        images={stallImages}
+        productName="Mini Makers Pop-Ups & Exhibitions"
+        onClose={() => setIsLightboxOpen(false)}
+      />
     </div>
   );
 };

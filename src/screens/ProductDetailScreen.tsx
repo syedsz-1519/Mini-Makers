@@ -11,9 +11,11 @@ import {
   ShoppingBag,
   ArrowLeft,
   Share2,
+  ZoomIn,
 } from 'lucide-react';
 import { BRAND, PRODUCTS } from '../data/catalog';
 import { Product, CustomOrderItem } from '../types';
+import { ProductLightboxModal } from '../components/ProductLightboxModal';
 
 interface ProductDetailScreenProps {
   product: Product;
@@ -39,6 +41,14 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
       ];
 
   const [selectedImage, setSelectedImage] = useState(gallery[0]);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const handleOpenLightbox = (index?: number) => {
+    const targetIdx = typeof index === 'number' ? index : gallery.indexOf(selectedImage);
+    setLightboxIndex(targetIdx >= 0 ? targetIdx : 0);
+    setIsLightboxOpen(true);
+  };
 
   // Customization selections
   const occasions = product.customizationOptions?.occasions || [
@@ -142,7 +152,11 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
           <div className="lg:col-span-6 flex flex-col items-center">
             {/* Main Stage Image */}
             <div className="relative w-full aspect-[4/5] rounded-[28px] overflow-hidden border border-[#F4B6C6] bg-white shadow-md p-2">
-              <div className="w-full h-full rounded-[22px] overflow-hidden relative group">
+              <div
+                onClick={() => handleOpenLightbox()}
+                className="w-full h-full rounded-[22px] overflow-hidden relative group cursor-zoom-in"
+                title="Tap or click to open full-screen zoom"
+              >
                 <img
                   src={selectedImage}
                   alt={product.name}
@@ -153,6 +167,18 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
                     {product.badge}
                   </span>
                 )}
+                {/* Floating zoom badge */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleOpenLightbox();
+                  }}
+                  className="absolute bottom-3 right-3 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/95 hover:bg-white text-[#B03A63] border border-[#F4B6C6] shadow-md flex items-center gap-1.5 backdrop-blur-xs transition-all group-hover:scale-105 active:scale-95"
+                >
+                  <ZoomIn className="w-3.5 h-3.5 text-[#B03A63]" />
+                  <span>Zoom Details</span>
+                </button>
               </div>
             </div>
 
@@ -161,12 +187,15 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
               {gallery.map((img, idx) => (
                 <button
                   key={idx}
+                  type="button"
                   onClick={() => setSelectedImage(img)}
-                  className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 p-0.5 transition-all shrink-0 ${
+                  onDoubleClick={() => handleOpenLightbox(idx)}
+                  className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 p-0.5 transition-all shrink-0 cursor-pointer ${
                     selectedImage === img
                       ? 'border-[#B03A63] ring-2 ring-[#B03A63]/30 scale-105'
                       : 'border-[#F4B6C6] opacity-70 hover:opacity-100'
                   }`}
+                  title="Click to view, double click to zoom"
                 >
                   <img src={img} alt="" className="w-full h-full object-cover rounded-xl" />
                 </button>
@@ -471,6 +500,15 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
           </div>
         )}
       </div>
+
+      {/* Full-Screen Product Gallery Lightbox with Zoom & Pan */}
+      <ProductLightboxModal
+        isOpen={isLightboxOpen}
+        initialIndex={lightboxIndex}
+        images={gallery}
+        productName={product.name}
+        onClose={() => setIsLightboxOpen(false)}
+      />
     </div>
   );
 };

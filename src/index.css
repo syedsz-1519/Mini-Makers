@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: 'Times New Roman', Times, 'Playfair Display', Georgia, serif;
+}
+
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
   }
 
   :root {
-    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-serif: 'Times New Roman', Times, 'Playfair Display', Georgia, serif;
     --font-sans: 'DM Sans', 'Poppins', system-ui, sans-serif;
     --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
     --fab-size: 44px;
@@ -70,7 +74,7 @@
     font-family: var(--font-urdu);
   }
 
-  h1, h2, h3, h4, .font-serif {
+  h1, h2, h3, h4, h5, h6, .font-serif {
     font-family: var(--font-serif);
     overflow-wrap: anywhere;
   }
