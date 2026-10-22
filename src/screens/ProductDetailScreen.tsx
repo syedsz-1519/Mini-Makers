@@ -310,7 +310,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
                   value={recipientName}
                   onChange={(e) => setRecipientName(e.target.value)}
                   placeholder="e.g. Fatima / Ayesha & Bilal"
-                  className="w-full px-4 py-2.5 rounded-xl text-xs outline-none border border-[#F4B6C6] bg-white text-[#3A2A30] focus:border-[#B03A63]"
+                  className="w-full px-4 py-3 rounded-xl text-base outline-none border border-[#F4B6C6] bg-white text-[#3A2A30] focus:border-[#B03A63] min-h-[48px]"
                 />
               </div>
 
@@ -323,7 +323,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
                   value={personalNote}
                   onChange={(e) => setPersonalNote(e.target.value)}
                   placeholder="Write your heartfelt message in Urdu or English. We will handwrite this on a luxury textured card with wax seal..."
-                  className="w-full px-4 py-2.5 rounded-xl text-xs outline-none border border-[#F4B6C6] bg-white text-[#3A2A30] focus:border-[#B03A63]"
+                  className="w-full px-4 py-3 rounded-xl text-base outline-none border border-[#F4B6C6] bg-white text-[#3A2A30] focus:border-[#B03A63] min-h-[48px]"
                 />
               </div>
             </div>
@@ -332,7 +332,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-4">
               <button
                 onClick={handleOrderWhatsApp}
-                className="flex-1 py-3.5 min-h-[48px] rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white shadow-md shadow-[#25D366]/20 transition-all"
+                className="w-full sm:flex-1 py-3.5 min-h-[48px] rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white shadow-md shadow-[#25D366]/20 transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Order on WhatsApp</span>
@@ -342,7 +342,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
                 href={BRAND.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 min-h-[48px] rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 border border-[#F4B6C6] bg-white text-[#B03A63] hover:bg-[#FBE4EA] transition-all"
+                className="w-full sm:flex-1 py-3.5 min-h-[48px] rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 border border-[#F4B6C6] bg-white text-[#B03A63] hover:bg-[#FBE4EA] transition-all"
               >
                 <Instagram className="w-4 h-4" />
                 <span>DM on Instagram</span>
@@ -352,7 +352,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
             {/* Inquiry Bag Add-to-List Button */}
             <button
               onClick={handleAddToCart}
-              className="w-full py-3 min-h-[44px] rounded-full text-xs font-semibold border-2 border-[#B03A63] text-[#B03A63] hover:bg-[#FBE4EA] flex items-center justify-center gap-2 transition-all bg-white"
+              className="w-full py-3 min-h-[48px] rounded-full text-xs font-semibold border-2 border-[#B03A63] text-[#B03A63] hover:bg-[#FBE4EA] flex items-center justify-center gap-2 transition-all bg-white"
             >
               <ShoppingBag className="w-3.5 h-3.5" />
               <span>{addedToast ? 'Added to Inquiry Bag!' : 'Add to Inquiry Bag (Save for Later)'}</span>

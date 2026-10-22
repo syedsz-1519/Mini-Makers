@@ -1,10 +1,20 @@
 @import "tailwindcss";
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   :root {
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'DM Sans', 'Poppins', system-ui, sans-serif;
     --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  }
+
+  html {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: clip;
   }
 
   body {
@@ -13,14 +23,125 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: #FFF8F3;
     color: #3A2A30;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: clip;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  }
+
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   .font-urdu {
     font-family: var(--font-urdu);
   }
 
-  h1, h2, h3, .font-serif {
+  h1, h2, h3, h4, .font-serif {
     font-family: var(--font-serif);
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Fluid Heading Typography (Mobile First) */
+.fluid-h1 {
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.fluid-h2 {
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.fluid-section-py {
+  padding-top: clamp(2rem, 6vw, 5rem);
+  padding-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+/* Form inputs: minimum 48px height and 16px font size to prevent iOS Safari auto-zoom */
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+  font-size: 16px !important;
+  min-height: 48px;
+}
+
+.input-mobile-touch {
+  min-height: 48px;
+  font-size: 16px !important;
+}
+
+/* Mobile Horizontal Scroll Ribbon with Touch Snap & Hidden Scrollbars */
+.mobile-swipe-ribbon {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 6px;
+  max-width: 100%;
+}
+
+.mobile-swipe-ribbon::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.mobile-swipe-ribbon > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Adaptive Product & Category Responsive Grid (2 cols on phones, 3 on tablets, 4 on desktop) */
+.adaptive-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 3vw, 24px);
+}
+
+@media (min-width: 600px) {
+  .adaptive-catalog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .adaptive-catalog-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* 2-column on mobile, 2 on tablet, 3 on desktop for larger showcase cards */
+.adaptive-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 3.5vw, 28px);
+}
+
+@media (min-width: 600px) {
+  .adaptive-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .adaptive-showcase-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -33,34 +154,25 @@
   box-shadow: 0 16px 40px -6px rgba(176, 58, 99, 0.14), 0 4px 14px rgba(58, 42, 48, 0.05);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+/* Custom Scrollbar for Desktop */
+@media (min-width: 900px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(176, 58, 99, 0.25);
-  border-radius: 9999px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: rgba(176, 58, 99, 0.25);
+    border-radius: 9999px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(176, 58, 99, 0.45);
-}
-
-/* Fluid Heading Typography */
-.fluid-h1 {
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  line-height: 1.15;
-}
-
-.fluid-h2 {
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  line-height: 1.25;
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(176, 58, 99, 0.45);
+  }
 }
 
 /* Boutique Hand-Drawn / Illustrated Heading Effects */
@@ -101,7 +213,7 @@
   border-radius: 9999px;
 }
 
-/* Subtle Floating Animations for Petals, Sparkles, and Dots */
+/* Floating Animations for Petals, Sparkles, and Dots (Clipped to Prevent Page Scroll) */
 @keyframes float-gentle {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
@@ -145,8 +257,24 @@
   animation: pulse-rose-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Touch Device Restraint: Hover states only on hover-capable pointers */
+@media (hover: none) {
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-1\.5:hover,
+  .hover\:scale-105:hover,
+  .hover\:scale-102:hover {
+    transform: none !important;
+  }
+}
+
 /* Accessibility: Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
   .animate-float,
   .animate-float-reverse,
   .pulsing-rose-ring {

@@ -6,7 +6,6 @@ import {
   Frame,
   ShoppingBag,
   Scissors,
-  Gift,
 } from 'lucide-react';
 import { BRAND, PRODUCTS } from '../data/catalog';
 import { Product } from '../types';
@@ -25,15 +24,14 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
   const frames = PRODUCTS.filter((p) => p.category === 'frames');
   const baskets = PRODUCTS.filter((p) => p.category === 'baskets');
   const accessories = PRODUCTS.filter((p) => p.category === 'accessories');
-  const greetingBoxes = PRODUCTS.filter((p) => p.category === 'greeting-boxes');
 
   return (
-    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Header */}
-      <section className="py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
+      <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/50">
         <div className="max-w-7xl mx-auto">
           <nav className="flex items-center gap-1.5 text-xs text-[#3A2A30]/70 mb-3" aria-label="Breadcrumb">
-            <button onClick={() => onNavigate('home')} className="hover:text-[#B03A63] transition-colors">
+            <button onClick={() => onNavigate('home')} className="hover:text-[#B03A63] transition-colors min-h-[44px] flex items-center">
               Home
             </button>
             <ChevronRight className="w-3.5 h-3.5 opacity-50" />
@@ -42,12 +40,14 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              {/* Script-style gold eyebrow with frame SVG */}
-              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+              {/* Gold eyebrow with frame SVG */}
+              <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/frame-heading.svg"
                   alt=""
-                  className="w-7 h-7 inline-block object-contain"
+                  className="w-6 h-6 sm:w-7 sm:h-7 inline-block object-contain"
+                  width={28}
+                  height={28}
                 />
                 <span>cherished memories &amp; gifts</span>
               </div>
@@ -57,24 +57,26 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
               </h1>
 
               {/* Floral decorative divider */}
-              <div className="flex items-center my-3" aria-hidden="true">
+              <div className="flex items-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-5 w-auto max-w-[200px] opacity-80"
+                  className="h-4 sm:h-5 w-auto max-w-[180px] sm:max-w-[200px] opacity-80"
+                  width={180}
+                  height={20}
                 />
               </div>
 
-              <p className="text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
                 Cherish sacred milestones with personalized floating frames, handwoven Punjab cane baskets, and handcrafted gota accessories.
               </p>
             </div>
 
-            {/* 3 Interactive Tabs */}
-            <div className="p-1 rounded-full border border-[#F4B6C6] bg-white flex items-center gap-1 shadow-xs">
+            {/* 3 Interactive Tabs: Swipeable on mobile to prevent squishing */}
+            <div className="mobile-swipe-ribbon p-1 rounded-2xl sm:rounded-full border border-[#F4B6C6] bg-white gap-1 shadow-xs max-w-full">
               <button
                 onClick={() => setActiveTab('frames')}
-                className={`px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-3.5 sm:px-4 py-2 min-h-[44px] rounded-xl sm:rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap shrink-0 ${
                   activeTab === 'frames'
                     ? 'bg-[#B03A63] text-white shadow-xs'
                     : 'text-[#3A2A30] hover:bg-[#FBE4EA]'
@@ -85,7 +87,7 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
               </button>
               <button
                 onClick={() => setActiveTab('baskets')}
-                className={`px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-3.5 sm:px-4 py-2 min-h-[44px] rounded-xl sm:rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap shrink-0 ${
                   activeTab === 'baskets'
                     ? 'bg-[#B03A63] text-white shadow-xs'
                     : 'text-[#3A2A30] hover:bg-[#FBE4EA]'
@@ -96,7 +98,7 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
               </button>
               <button
                 onClick={() => setActiveTab('accessories')}
-                className={`px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-3.5 sm:px-4 py-2 min-h-[44px] rounded-xl sm:rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap shrink-0 ${
                   activeTab === 'accessories'
                     ? 'bg-[#B03A63] text-white shadow-xs'
                     : 'text-[#3A2A30] hover:bg-[#FBE4EA]'
@@ -110,29 +112,32 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10">
         
         {/* TAB 1: CUSTOMIZED FRAMES */}
         {activeTab === 'frames' && (
           <section className="space-y-6">
-            <div className="text-center max-w-xl mx-auto mb-8">
+            <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
               <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/frame-heading.svg"
                   alt=""
                   className="w-6 h-6 inline-block object-contain"
+                  width={24}
+                  height={24}
                 />
                 <span>archival preservation</span>
               </div>
-              <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
+              <h2 className="font-serif italic text-xl sm:text-3xl font-bold text-[#3A2A30] fluid-h2">
                 Preserve Every Memory in <span className="highlight-marker">Gold &amp; Glass</span>
               </h2>
-              {/* Decorative Floral / Diamond Divider */}
-              <div className="flex items-center justify-center my-3" aria-hidden="true">
+              <div className="flex items-center justify-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-4 w-auto max-w-[200px] opacity-80"
+                  className="h-4 w-auto max-w-[180px] opacity-80"
+                  width={180}
+                  height={16}
                 />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
@@ -140,85 +145,162 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="adaptive-catalog-grid">
               {frames.map((item) => (
-                <div
+                <article
                   key={item.id}
-                  onClick={() => onSelectProduct(item)}
-                  className="rounded-3xl p-4 border border-[#F4B6C6]/60 bg-white flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1.5 shadow-xs hover:shadow-lg"
+                  className="rounded-3xl border border-[#F4B6C6]/60 bg-white p-3.5 sm:p-4 flex flex-col h-full shadow-xs hover:shadow-lg transition-all group"
                 >
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-[#FBE4EA]/30">
+                  <div
+                    onClick={() => onSelectProduct(item)}
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 cursor-pointer bg-[#FBE4EA]/30"
+                  >
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      width={320}
+                      height={240}
                     />
-                    <span className="absolute bottom-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold bg-black/60 backdrop-blur-md text-white">
-                      Archival Glass
+                    {item.badge && (
+                      <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex flex-col flex-1">
+                    <span className="text-[10px] uppercase font-semibold text-[#B03A63] tracking-wider mb-0.5">
+                      {item.subCategory}
                     </span>
+                    <h3
+                      onClick={() => onSelectProduct(item)}
+                      className="font-serif text-sm sm:text-base font-bold hover:text-[#B03A63] cursor-pointer transition-colors mb-1 text-[#3A2A30] line-clamp-2"
+                    >
+                      {item.name}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-auto pt-2.5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <span className="text-[9px] text-[#3A2A30]/60 block uppercase font-semibold">Pricing</span>
+                        <span className="text-xs font-semibold text-[#B03A63]">
+                          Price on request, DM
+                        </span>
+                      </div>
+                      <a
+                        href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
+                          `Assalam-o-Alaikum! I want to order customized frame: ${item.name}.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-3 py-1.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs flex items-center justify-center gap-1.5 transition-all"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        <span>Order</span>
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="font-serif text-lg font-bold mb-1 text-[#3A2A30]">{item.name}</h3>
-                  <p className="text-xs text-[#3A2A30]/75 line-clamp-2 mb-3">{item.description}</p>
-                  <div className="mt-auto pt-2 border-t border-[#F4B6C6]/40 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-[#B03A63]">Price on request, DM to order</span>
-                    <span className="text-xs font-semibold underline text-[#C9A66B] hover:text-[#B03A63]">Order Frame →</span>
-                  </div>
-                </div>
+                </article>
               ))}
             </div>
           </section>
         )}
 
-        {/* TAB 2: BASKETS */}
+        {/* TAB 2: CURATED BASKETS */}
         {activeTab === 'baskets' && (
           <section className="space-y-6">
-            <div className="text-center max-w-xl mx-auto mb-8">
+            <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
               <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/basket-heading.svg"
                   alt=""
                   className="w-6 h-6 inline-block object-contain"
+                  width={24}
+                  height={24}
                 />
-                <span>woven with affection</span>
+                <span>traditional woven wicker</span>
               </div>
-              <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
-                Handwoven Punjab Cane &amp; <span className="highlight-marker">Treat Baskets</span>
+              <h2 className="font-serif italic text-xl sm:text-3xl font-bold text-[#3A2A30] fluid-h2">
+                Handcrafted <span className="highlight-marker">Cane Baskets</span>
               </h2>
-              <div className="flex items-center justify-center my-3" aria-hidden="true">
+              <div className="flex items-center justify-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-4 w-auto max-w-[200px] opacity-80"
+                  className="h-4 w-auto max-w-[180px] opacity-80"
+                  width={180}
+                  height={16}
                 />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
-                Snack baskets, newborn welcome hampers, and celebration trays trimmed with satin ribbons and baby’s breath.
+                Newborn baby welcome hampers, festive Eid mithai baskets, and luxury fruit crates wrapped with organza frills.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="adaptive-catalog-grid">
               {baskets.map((item) => (
-                <div
+                <article
                   key={item.id}
-                  onClick={() => onSelectProduct(item)}
-                  className="rounded-3xl p-4 border border-[#F4B6C6]/60 bg-white flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1.5 shadow-xs hover:shadow-lg"
+                  className="rounded-3xl border border-[#F4B6C6]/60 bg-white p-3.5 sm:p-4 flex flex-col h-full shadow-xs hover:shadow-lg transition-all group"
                 >
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-[#FBE4EA]/30">
+                  <div
+                    onClick={() => onSelectProduct(item)}
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 cursor-pointer bg-[#FBE4EA]/30"
+                  >
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      width={320}
+                      height={240}
                     />
+                    {item.badge && (
+                      <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                        {item.badge}
+                      </span>
+                    )}
                   </div>
-                  <h3 className="font-serif text-lg font-bold mb-1 text-[#3A2A30]">{item.name}</h3>
-                  <p className="text-xs text-[#3A2A30]/75 line-clamp-2 mb-3">{item.description}</p>
-                  <div className="mt-auto pt-2 border-t border-[#F4B6C6]/40 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-[#B03A63]">Price on request, DM to order</span>
-                    <span className="text-xs font-semibold underline text-[#C9A66B] hover:text-[#B03A63]">Inquire Basket →</span>
+
+                  <div className="flex flex-col flex-1">
+                    <span className="text-[10px] uppercase font-semibold text-[#B03A63] tracking-wider mb-0.5">
+                      {item.subCategory}
+                    </span>
+                    <h3
+                      onClick={() => onSelectProduct(item)}
+                      className="font-serif text-sm sm:text-base font-bold hover:text-[#B03A63] cursor-pointer transition-colors mb-1 text-[#3A2A30] line-clamp-2"
+                    >
+                      {item.name}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-auto pt-2.5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <span className="text-[9px] text-[#3A2A30]/60 block uppercase font-semibold">Pricing</span>
+                        <span className="text-xs font-semibold text-[#B03A63]">
+                          Price on request, DM
+                        </span>
+                      </div>
+                      <a
+                        href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
+                          `Assalam-o-Alaikum! I want to order handcrafted basket: ${item.name}.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-3 py-1.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs flex items-center justify-center gap-1.5 transition-all"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        <span>Order</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </section>
@@ -227,108 +309,98 @@ export const FramesBasketsScreen: React.FC<FramesBasketsScreenProps> = ({
         {/* TAB 3: ACCESSORIES */}
         {activeTab === 'accessories' && (
           <section className="space-y-6">
-            <div className="text-center max-w-xl mx-auto mb-8">
+            <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
               <div className="flex items-center justify-center gap-2 mb-1.5 font-serif italic text-sm font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/accessory-heading.svg"
                   alt=""
                   className="w-6 h-6 inline-block object-contain"
+                  width={24}
+                  height={24}
                 />
-                <span>dainty wedding adornments</span>
+                <span>embellished details</span>
               </div>
-              <h2 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#3A2A30]">
-                Handcrafted Gota &amp; <span className="highlight-marker">Pearl Adornments</span>
+              <h2 className="font-serif italic text-xl sm:text-3xl font-bold text-[#3A2A30] fluid-h2">
+                Handmade <span className="highlight-marker">Hair Pins &amp; Scrunchies</span>
               </h2>
-              <div className="flex items-center justify-center my-3" aria-hidden="true">
+              <div className="flex items-center justify-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-4 w-auto max-w-[200px] opacity-80"
+                  className="h-4 w-auto max-w-[180px] opacity-80"
+                  width={180}
+                  height={16}
                 />
               </div>
               <p className="text-xs text-[#3A2A30]/75">
-                Gota flower hair pins, silk scrunchies, and wedding wrist corsages hand-stitched for sisters and brides.
+                Delicate pearl hair clips, hand-pleated satin scrunchies, and woven friendship bead bracelets.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="adaptive-catalog-grid">
               {accessories.map((item) => (
-                <div
+                <article
                   key={item.id}
-                  onClick={() => onSelectProduct(item)}
-                  className="rounded-3xl p-4 border border-[#F4B6C6]/60 bg-white flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1.5 shadow-xs hover:shadow-lg"
+                  className="rounded-3xl border border-[#F4B6C6]/60 bg-white p-3.5 sm:p-4 flex flex-col h-full shadow-xs hover:shadow-lg transition-all group"
                 >
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-[#FBE4EA]/30">
+                  <div
+                    onClick={() => onSelectProduct(item)}
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 cursor-pointer bg-[#FBE4EA]/30"
+                  >
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      width={320}
+                      height={240}
                     />
+                    {item.badge && (
+                      <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                        {item.badge}
+                      </span>
+                    )}
                   </div>
-                  <h3 className="font-serif text-lg font-bold mb-1 text-[#3A2A30]">{item.name}</h3>
-                  <p className="text-xs text-[#3A2A30]/75 line-clamp-2 mb-3">{item.description}</p>
-                  <div className="mt-auto pt-2 border-t border-[#F4B6C6]/40 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-[#B03A63]">Price on request, DM to order</span>
-                    <span className="text-xs font-semibold underline text-[#C9A66B] hover:text-[#B03A63]">Order via DM →</span>
+
+                  <div className="flex flex-col flex-1">
+                    <span className="text-[10px] uppercase font-semibold text-[#B03A63] tracking-wider mb-0.5">
+                      {item.subCategory}
+                    </span>
+                    <h3
+                      onClick={() => onSelectProduct(item)}
+                      className="font-serif text-sm sm:text-base font-bold hover:text-[#B03A63] cursor-pointer transition-colors mb-1 text-[#3A2A30] line-clamp-2"
+                    >
+                      {item.name}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-auto pt-2.5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <span className="text-[9px] text-[#3A2A30]/60 block uppercase font-semibold">Pricing</span>
+                        <span className="text-xs font-semibold text-[#B03A63]">
+                          Price on request, DM
+                        </span>
+                      </div>
+                      <a
+                        href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
+                          `Assalam-o-Alaikum! I want to order accessory: ${item.name}.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-3 py-1.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs flex items-center justify-center gap-1.5 transition-all"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        <span>Order</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </section>
         )}
-
-        {/* Greeting Boxes Strip (Eidi Treasure, Flower Basket) */}
-        <section className="mt-16 p-6 sm:p-8 rounded-3xl border border-[#F4B6C6] bg-gradient-to-r from-[#FBE4EA]/60 via-white to-[#FBE4EA]/40 shadow-xs">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
-            <div>
-              <span className="text-xs uppercase font-bold tracking-widest text-[#B03A63] flex items-center gap-1.5">
-                <Gift className="w-4 h-4 text-[#C9A66B]" />
-                <span>Festive &amp; Eidi Keepsakes</span>
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold mt-1 text-[#3A2A30]">
-                Greeting Boxes &amp; Eidi Treasure Chests
-              </h2>
-              <p className="text-xs text-[#3A2A30]/80 mt-1 max-w-xl">
-                Make Eid, Chaand Raat, and family reunions memorable with engraved wooden treasure chests and floral greeting boxes.
-              </p>
-            </div>
-            <a
-              href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
-                'Assalam-o-Alaikum! I want to inquire about custom Eidi Treasure Boxes and Greeting Hampers.'
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 min-h-[44px] rounded-full text-xs font-semibold bg-[#25D366] hover:bg-[#20ba59] text-white shrink-0 flex items-center gap-1.5 shadow-sm"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Book Eidi Boxes on WhatsApp</span>
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {greetingBoxes.map((box) => (
-              <div
-                key={box.id}
-                onClick={() => onSelectProduct(box)}
-                className="p-4 rounded-2xl border border-[#F4B6C6]/60 bg-white flex items-center gap-4 cursor-pointer hover:border-[#B03A63] transition-all shadow-xs"
-              >
-                <img
-                  src={box.image}
-                  alt={box.name}
-                  className="w-20 h-20 rounded-xl object-cover shrink-0"
-                />
-                <div className="flex flex-col">
-                  <h4 className="font-serif text-base font-bold leading-tight text-[#3A2A30]">{box.name}</h4>
-                  <p className="text-xs text-[#3A2A30]/75 line-clamp-2 mt-1">{box.description}</p>
-                  <span className="text-xs font-semibold text-[#B03A63] mt-2">
-                    Price on request, DM to order
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   );

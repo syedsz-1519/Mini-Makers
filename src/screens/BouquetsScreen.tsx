@@ -5,7 +5,6 @@ import {
   ArrowRight,
   ChevronRight,
   Eye,
-  Heart,
 } from 'lucide-react';
 import { BRAND, PRODUCTS } from '../data/catalog';
 import { Product } from '../types';
@@ -42,15 +41,15 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
       : bouquetProducts.filter((p) => p.subCategory === selectedFilter);
 
   return (
-    <div className="w-full pb-28 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Header with Breadcrumb & Title */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/40">
+      <section className="py-6 sm:py-10 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-[#FBE4EA]/40">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs text-[#3A2A30]/70 mb-4" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-1.5 text-xs text-[#3A2A30]/70 mb-3" aria-label="Breadcrumb">
             <button
               onClick={() => onNavigate('home')}
-              className="hover:text-[#B03A63] transition-colors"
+              className="hover:text-[#B03A63] transition-colors min-h-[44px] flex items-center"
             >
               Home
             </button>
@@ -60,12 +59,14 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              {/* Script-style gold eyebrow with bouquet SVG */}
-              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+              {/* Gold eyebrow with bouquet SVG */}
+              <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/bouquet-heading.svg"
                   alt=""
-                  className="w-7 h-7 inline-block object-contain"
+                  className="w-6 h-6 sm:w-7 sm:h-7 inline-block object-contain"
+                  width={28}
+                  height={28}
                 />
                 <span>eternal floral art</span>
               </div>
@@ -73,14 +74,16 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
                 Handmade <span className="highlight-marker">Bouquets</span>
               </h1>
               {/* Floral decorative divider */}
-              <div className="flex items-center my-3" aria-hidden="true">
+              <div className="flex items-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-5 w-auto max-w-[200px] opacity-80"
+                  className="h-4 sm:h-5 w-auto max-w-[180px] sm:max-w-[200px] opacity-80"
+                  width={180}
+                  height={20}
                 />
               </div>
-              <p className="text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#3A2A30]/80 mt-1 max-w-xl leading-relaxed">
                 Bespoke chenille velvet tulips, satin folded roses, Lindt &amp; Ferrero chocolates, and crisp currency origami. Crafted with love in Lahore | Pattoki.
               </p>
             </div>
@@ -90,15 +93,15 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
             </div>
           </div>
 
-          {/* Filter Chips Row (horizontally scrollable on mobile) */}
-          <div className="flex items-center gap-2 mt-8 overflow-x-auto pb-2 scrollbar-none">
+          {/* Filter Chips Ribbon: Horizontal swipe with scroll-snap and hidden scrollbars */}
+          <div className="mobile-swipe-ribbon gap-2 mt-6">
             {filterChips.map((chip) => {
               const isSelected = selectedFilter === chip;
               return (
                 <button
                   key={chip}
                   onClick={() => setSelectedFilter(chip)}
-                  className={`px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold whitespace-nowrap transition-all border flex items-center justify-center ${
+                  className={`px-4 py-2 min-h-[44px] rounded-full text-xs font-semibold whitespace-nowrap transition-all border flex items-center justify-center shrink-0 ${
                     isSelected
                       ? 'bg-[#B03A63] text-white border-[#B03A63] shadow-xs'
                       : 'bg-white text-[#3A2A30] border-[#F4B6C6] hover:bg-[#FBE4EA]'
@@ -112,58 +115,72 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-10">
         
         {/* Featured Banner for Crochet / Pipe-Cleaner Flower Bouquets */}
-        <section className="rounded-3xl p-6 sm:p-10 mb-14 border border-[#F4B6C6] bg-gradient-to-r from-[#FBE4EA] via-[#FFF8F3] to-[#F4B6C6]/40 shadow-sm overflow-hidden relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <section className="rounded-3xl p-5 sm:p-8 lg:p-10 mb-10 sm:mb-14 border border-[#F4B6C6] bg-gradient-to-r from-[#FBE4EA] via-[#FFF8F3] to-[#F4B6C6]/40 shadow-xs overflow-hidden relative">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             {/* Image showcase Left */}
-            <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative w-64 sm:w-72 aspect-[4/5] rounded-[100px_100px_24px_24px] overflow-hidden shadow-xl border-2 border-white">
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-[280px] sm:max-w-sm aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white shadow-lg relative group bg-white">
                 <img
                   src="/assets/images/bouquets/red-tulip-bouquet.jpg"
-                  alt="Chenille Velvet Red Tulips & Azure Forget-Me-Nots"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  alt="Red Tulip Handcrafted Bouquet"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width={384}
+                  height={480}
                 />
-                <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-[#B03A63] border border-[#F4B6C6]">
-                  Signature Masterpiece
+                <span className="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                  Bestseller
                 </span>
               </div>
             </div>
 
             {/* Banner Text Right */}
             <div className="lg:col-span-7 flex flex-col items-start">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#B03A63] mb-1">
-                Artisan Spotlight · Lahore | Pattoki
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-3 text-[#3A2A30]">
-                Handmade Velvet Chenille Tulips &amp; Crochet Forget-Me-Nots
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase mb-3 bg-white text-[#B03A63] border border-[#F4B6C6]">
+                <Sparkles className="w-3.5 h-3.5 text-[#C9A66B]" />
+                <span>Velvet Chenille Craft</span>
+              </div>
+              <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-[#3A2A30]">
+                Signature Velvet Red Tulip <span className="highlight-marker">Forever Bouquet</span>
               </h2>
-              <p className="text-sm text-[#3A2A30]/80 leading-relaxed mb-6">
-                Our viral signature bouquet! Tactile plush red chenille tulips nestled with powder-blue florets and delicate warm fairy lights. These blooms never wither, never lose their charm, and remain a cherished room keepsake for years.
+              <p className="text-xs sm:text-sm text-[#3A2A30]/80 leading-relaxed mb-4">
+                Unlike natural flowers that wilt in 3 days, our handcrafted chenille pipe-cleaner tulips stay vibrant forever. Wrapped in luxury Korean matte waterproof paper and finished with satin ribbons.
               </p>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full max-w-lg mb-6 text-xs text-[#3A2A30]">
+                <div className="p-2.5 rounded-xl bg-white border border-[#F4B6C6]/60">
+                  <span className="font-bold block text-[#B03A63]">Never Wilts</span>
+                  <span className="text-[11px] text-[#3A2A30]/70">Everlasting memory</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white border border-[#F4B6C6]/60">
+                  <span className="font-bold block text-[#B03A63]">Custom Colors</span>
+                  <span className="text-[11px] text-[#3A2A30]/70">Red, pink, lavender</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white border border-[#F4B6C6]/60 col-span-2 sm:col-span-1">
+                  <span className="font-bold block text-[#B03A63]">Nationwide</span>
+                  <span className="text-[11px] text-[#3A2A30]/70">Safe courier box</span>
+                </div>
+              </div>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
                 <button
-                  onClick={() => {
-                    const tulip = PRODUCTS.find((p) => p.id === 'chenille-tulip-forever-bouquet');
-                    if (tulip) onSelectProduct(tulip);
-                  }}
-                  className="px-6 py-3 min-h-[44px] rounded-full text-xs font-semibold tracking-wide uppercase bg-[#B03A63] hover:bg-[#962B56] text-white shadow-sm flex items-center gap-2 transition-all"
+                  onClick={() => onSelectProduct(PRODUCTS[0])}
+                  className="px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>Customize This</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Customize &amp; Price</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
-
                 <a
-                  href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
+                  href={`https://wa.me/923414655335?text=${encodeURIComponent(
                     'Assalam-o-Alaikum! I want to order the Signature Velvet Red Tulip Forever Bouquet.'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 min-h-[44px] rounded-full text-xs font-semibold tracking-wide uppercase bg-[#25D366] hover:bg-[#20ba59] text-white shadow-sm flex items-center gap-2 transition-all"
+                  className="px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase bg-[#25D366] hover:bg-[#20ba59] text-white shadow-xs flex items-center justify-center gap-2 transition-all"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" />
+                  <MessageCircle className="w-4 h-4" />
                   <span>Order via WhatsApp</span>
                 </a>
               </div>
@@ -171,117 +188,75 @@ export const BouquetsScreen: React.FC<BouquetsScreenProps> = ({
           </div>
         </section>
 
-        {/* Product Grid (3 cols desktop, 2 mobile) */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        {/* Adaptive Product Grid (Priority 5: 2 cols phone, 3 tablet, 4 desktop) */}
+        <div className="adaptive-catalog-grid">
           {filteredProducts.map((product) => (
             <article
               key={product.id}
-              className="rounded-3xl border border-[#F4B6C6]/60 bg-white p-3.5 sm:p-5 flex flex-col transition-all duration-300 hover:-translate-y-1 shadow-xs hover:shadow-lg group"
+              className="rounded-3xl border border-[#F4B6C6]/60 bg-white p-3 sm:p-4 flex flex-col h-full transition-all duration-300 shadow-xs hover:shadow-lg group"
             >
               {/* Product Image */}
               <div
                 onClick={() => onSelectProduct(product)}
-                className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3.5 cursor-pointer bg-[#FBE4EA]/30"
+                className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3 cursor-pointer bg-[#FBE4EA]/30"
               >
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  width={280}
+                  height={350}
                 />
                 
                 {product.badge && (
-                  <span className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                  <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
                     {product.badge}
                   </span>
                 )}
 
-                <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[9px] font-semibold bg-white/90 text-[#3A2A30] border border-[#F4B6C6]/50">
+                <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[9px] font-semibold bg-white/95 text-[#3A2A30] border border-[#F4B6C6]/50">
                   Customizable
                 </div>
               </div>
 
               {/* Product Info */}
               <div className="flex flex-col flex-1">
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#B03A63] mb-0.5">
+                <span className="text-[10px] uppercase tracking-wider font-semibold text-[#B03A63] mb-0.5">
                   {product.subCategory || 'Everlasting Bloom'}
                 </span>
                 <h3
                   onClick={() => onSelectProduct(product)}
-                  className="font-serif text-sm sm:text-lg font-bold leading-snug line-clamp-2 cursor-pointer hover:text-[#B03A63] transition-colors mb-1 text-[#3A2A30]"
+                  className="font-serif text-xs sm:text-base font-bold leading-snug line-clamp-2 cursor-pointer hover:text-[#B03A63] transition-colors mb-1 text-[#3A2A30]"
                 >
                   {product.name}
                 </h3>
-                <p className="text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
                   {product.tagline}
                 </p>
 
                 {/* Bottom Row */}
-                <div className="mt-auto pt-3 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="mt-auto pt-2.5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
                   <div className="flex flex-col">
-                    <span className="text-[10px] text-[#3A2A30]/60 uppercase font-semibold">Pricing</span>
-                    <span className="text-xs sm:text-sm font-semibold text-[#B03A63]">
-                      Price on request, DM to order
+                    <span className="text-[9px] sm:text-[10px] text-[#3A2A30]/60 uppercase font-semibold">Pricing</span>
+                    <span className="text-xs font-semibold text-[#B03A63]">
+                      Price on request, DM
                     </span>
                   </div>
 
                   <div className="flex items-center gap-1.5">
                     <button
                       onClick={() => onSelectProduct(product)}
-                      className="p-2 min-h-[40px] min-w-[40px] rounded-full border border-[#F4B6C6] hover:bg-[#FBE4EA] text-[#3A2A30] text-xs flex items-center justify-center transition-colors"
-                      title="Customize details"
+                      className="w-full sm:w-auto px-3 py-1.5 min-h-[44px] rounded-full text-[11px] font-semibold bg-[#FBE4EA] text-[#B03A63] hover:bg-[#B03A63] hover:text-white transition-colors flex items-center justify-center gap-1"
                     >
                       <Eye className="w-3.5 h-3.5" />
+                      <span>Details</span>
                     </button>
-                    <a
-                      href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
-                        `Assalam-o-Alaikum Mini Makers! I want to order the ${product.name}.`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-2 min-h-[40px] rounded-full text-xs font-semibold flex items-center justify-center gap-1 transition-all bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs"
-                    >
-                      <MessageCircle className="w-3 h-3" />
-                      <span>Order via DM</span>
-                    </a>
                   </div>
                 </div>
               </div>
             </article>
           ))}
-        </div>
-      </div>
-
-      {/* Sticky Bottom Bar with right offset for floating buttons */}
-      <div className="fixed bottom-0 inset-x-0 z-30 py-3 px-4 pr-20 sm:pr-24 border-t border-[#F4B6C6] bg-white/95 backdrop-blur-md shadow-lg text-[#3A2A30]">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5">
-          <div className="flex items-center gap-2.5 text-center sm:text-left">
-            <div className="w-8 h-8 rounded-full bg-[#FBE4EA] text-[#B03A63] hidden sm:flex items-center justify-center shrink-0">
-              <Sparkles className="w-4 h-4 text-[#C9A66B]" />
-            </div>
-            <div>
-              <p className="text-xs sm:text-sm font-bold text-[#3A2A30]">
-                Need a Custom Bouquet? Let’s Design It Together!
-              </p>
-              <p className="text-[11px] text-[#3A2A30]/75 hidden sm:block">
-                Choose custom flower stems, wrap shades, fairy lights &amp; personalized Urdu notes.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 w-full sm:w-auto">
-            <a
-              href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
-                'Assalam-o-Alaikum! I need a custom bouquet arrangement with specific colors.'
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-5 py-2.5 min-h-[44px] rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-semibold tracking-wide flex items-center justify-center gap-1.5 shadow-sm"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Inquire on WhatsApp (0341-4655335)</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>

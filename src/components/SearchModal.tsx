@@ -57,7 +57,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search bouquets, doodh pilai glass, nikkah pens, snack boxes..."
-            className="flex-1 bg-transparent text-sm sm:text-base outline-none text-[#3A2A30] placeholder:text-[#3A2A30]/50"
+            className="flex-1 bg-transparent text-base outline-none text-[#3A2A30] placeholder:text-[#3A2A30]/50 min-h-[44px]"
           />
           {query && (
             <button

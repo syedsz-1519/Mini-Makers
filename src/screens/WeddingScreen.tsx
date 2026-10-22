@@ -3,10 +3,7 @@ import {
   MessageCircle,
   Sparkles,
   ChevronRight,
-  Heart,
-  Crown,
   Calendar,
-  Eye,
 } from 'lucide-react';
 import { BRAND, PRODUCTS } from '../data/catalog';
 import { Product } from '../types';
@@ -23,60 +20,64 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
   const weddingProducts = PRODUCTS.filter((p) => p.category === 'wedding');
 
   return (
-    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30]">
+    <div className="w-full pb-20 bg-[#FFF8F3] text-[#3A2A30] overflow-x-clip">
       {/* Wedding Hero Banner */}
-      <section className="relative py-12 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-gradient-to-b from-[#FFF8F3] via-[#FBE4EA]/60 to-[#FFF8F3]">
+      <section className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-12 border-b border-[#F4B6C6]/40 bg-gradient-to-b from-[#FFF8F3] via-[#FBE4EA]/60 to-[#FFF8F3]">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1.5 text-xs text-[#3A2A30]/70 mb-4" aria-label="Breadcrumb">
-            <button onClick={() => onNavigate('home')} className="hover:text-[#B03A63] transition-colors">
+          <nav className="flex items-center gap-1.5 text-xs text-[#3A2A30]/70 mb-3" aria-label="Breadcrumb">
+            <button onClick={() => onNavigate('home')} className="hover:text-[#B03A63] transition-colors min-h-[44px] flex items-center">
               Home
             </button>
             <ChevronRight className="w-3.5 h-3.5 opacity-50" />
             <span className="font-semibold text-[#B03A63]">Wedding &amp; Nikkah</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             <div className="lg:col-span-8">
               {/* Script-style gold eyebrow with wedding SVG */}
-              <div className="flex items-center gap-2 mb-2 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
+              <div className="flex items-center gap-2 mb-1.5 font-serif italic text-sm sm:text-base font-medium text-[#C9A66B] tracking-wide">
                 <img
                   src="/assets/icons/headings/wedding-heading.svg"
                   alt=""
-                  className="w-7 h-7 inline-block object-contain"
+                  className="w-6 h-6 sm:w-7 sm:h-7 inline-block object-contain"
+                  width={28}
+                  height={28}
                 />
                 <span>royal bridal &amp; nikkah keepsakes</span>
               </div>
 
-              <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-3 text-[#3A2A30]">
+              <h1 className="font-serif italic font-bold tracking-tight fluid-h1 mb-2 sm:mb-3 text-[#3A2A30]">
                 Make Your <span className="highlight-marker">Shadi</span> Extra Special
               </h1>
 
               {/* Floral decorative divider */}
-              <div className="flex items-center my-3" aria-hidden="true">
+              <div className="flex items-center my-2.5" aria-hidden="true">
                 <img
                   src="/assets/icons/headings/divider-ornament.svg"
                   alt=""
-                  className="h-5 w-auto max-w-[200px] opacity-80"
+                  className="h-4 sm:h-5 w-auto max-w-[180px] sm:max-w-[200px] opacity-80"
+                  width={180}
+                  height={20}
                 />
               </div>
 
-              <div className="flex items-center gap-2 text-sm italic font-serif text-[#C9A66B] font-semibold mb-4">
+              <div className="flex items-center gap-2 text-xs sm:text-sm italic font-serif text-[#C9A66B] font-semibold mb-3">
                 <span>Traditional Artisanship for Barat, Mayun, Mehndi &amp; Nikkah Celebrations</span>
               </div>
 
-              <p className="text-base sm:text-lg text-[#3A2A30]/80 max-w-2xl leading-relaxed mb-6">
+              <p className="text-xs sm:text-base text-[#3A2A30]/80 max-w-2xl leading-relaxed mb-5">
                 From hand-embellished crystal Doodh Pilai glasses and laser-engraved Nikkah pens to mirror mosaic Mehndi plates and royal velvet lifafas, each heirloom is custom made in <strong>Lahore | Pattoki</strong>.
               </p>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
                 <a
                   href={`https://wa.me/${BRAND.whatsappRaw}?text=${encodeURIComponent(
                     'Assalam-o-Alaikum! I want to discuss a customized Wedding & Shadi order.'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-7 py-3 min-h-[44px] rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-2 bg-[#B03A63] hover:bg-[#962B56] text-white shadow-md shadow-[#B03A63]/20 transition-all"
+                  className="w-full sm:w-auto px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#B03A63] hover:bg-[#962B56] text-white shadow-md shadow-[#B03A63]/20 transition-all"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Book Wedding Order via WhatsApp</span>
@@ -86,13 +87,13 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
 
             {/* Quick Stats or Small Arch Badge */}
             <div className="lg:col-span-4 flex justify-center">
-              <div className="p-6 rounded-3xl border border-[#C9A66B]/40 bg-white/90 shadow-sm max-w-xs text-center">
-                <Sparkles className="w-8 h-8 text-[#C9A66B] mx-auto mb-2" />
-                <h4 className="font-serif text-lg font-bold text-[#3A2A30]">Bridal Customization</h4>
+              <div className="p-5 sm:p-6 rounded-3xl border border-[#C9A66B]/40 bg-white/90 shadow-xs max-w-xs text-center w-full">
+                <Sparkles className="w-7 h-7 sm:w-8 sm:h-8 text-[#C9A66B] mx-auto mb-2" />
+                <h4 className="font-serif text-base sm:text-lg font-bold text-[#3A2A30]">Bridal Customization</h4>
                 <p className="text-xs text-[#3A2A30]/80 mt-1 leading-relaxed">
-                  Personalized couple names, Nikkah dates in Arabic or Nastaliq gold calligraphy, and matching dress palette themes.
+                  Personalized couple names, Nikkah dates in Arabic calligraphy, and matching dress palette themes.
                 </p>
-                <div className="mt-4 pt-3 border-t border-[#F4B6C6]/30 text-xs font-semibold text-[#B03A63]">
+                <div className="mt-3 pt-3 border-t border-[#F4B6C6]/30 text-xs font-semibold text-[#B03A63]">
                   Lahore &amp; Pattoki Express · PK Delivery
                 </div>
               </div>
@@ -102,8 +103,8 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
       </section>
 
       {/* Booking Notice Callout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8">
-        <div className="p-4 rounded-2xl border border-[#C9A66B] bg-[#FFF8F3] text-[#3A2A30] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 sm:pt-8">
+        <div className="p-4 rounded-2xl border border-[#C9A66B] bg-[#FFF8F3] text-[#3A2A30] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 shadow-xs text-center sm:text-left">
           <div className="flex items-center gap-3">
             <Calendar className="w-5 h-5 text-[#C9A66B] shrink-0" />
             <div className="text-xs sm:text-sm">
@@ -116,71 +117,73 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#B03A63] hover:bg-[#962B56] text-white shrink-0 transition-colors shadow-xs flex items-center justify-center"
+            className="w-full sm:w-auto px-5 py-2.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#B03A63] hover:bg-[#962B56] text-white shrink-0 transition-colors shadow-xs flex items-center justify-center"
           >
             Check Shadi Dates via WhatsApp
           </a>
         </div>
 
-        {/* Wedding Products Grid */}
-        <div className="mt-10">
-          <div className="mb-8">
+        {/* Wedding Products Grid (Priority 5: 2 cols phone, 3 tablet, 4 desktop) */}
+        <div className="mt-8 sm:mt-10">
+          <div className="mb-6 sm:mb-8 text-center sm:text-left">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#B03A63]">
               Ceremonial Essentials
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold mt-1 text-[#3A2A30]">
+            <h2 className="font-serif text-xl sm:text-3xl font-bold mt-1 text-[#3A2A30] fluid-h2">
               Handcrafted Shadi Collection
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="adaptive-catalog-grid">
             {weddingProducts.map((item) => (
               <article
                 key={item.id}
-                className="rounded-[26px] overflow-hidden border border-[#F4B6C6]/60 bg-white p-4 flex flex-col transition-all duration-300 hover:-translate-y-1.5 shadow-xs hover:shadow-xl group"
+                className="rounded-3xl overflow-hidden border border-[#F4B6C6]/60 bg-white p-3.5 sm:p-4 flex flex-col h-full transition-all duration-300 shadow-xs hover:shadow-lg group"
               >
                 <div
                   onClick={() => onSelectProduct(item)}
-                  className="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden mb-4 cursor-pointer bg-[#FBE4EA]/30"
+                  className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-3 cursor-pointer bg-[#FBE4EA]/30"
                 >
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
+                    width={320}
+                    height={240}
                   />
                   {item.badge && (
-                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
+                    <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#B03A63] text-white shadow-xs">
                       {item.badge}
                     </span>
                   )}
-                  <span className="absolute bottom-3 right-3 px-3 py-1 rounded-full text-[10px] font-semibold bg-black/60 backdrop-blur-md text-white">
+                  <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full text-[9px] font-semibold bg-black/60 backdrop-blur-md text-white">
                     {item.subCategory}
                   </span>
                 </div>
 
                 <div className="flex flex-col flex-1">
                   <div className="flex items-center justify-between text-xs mb-1">
-                    <span className="font-serif italic text-[#B03A63] font-semibold">{item.subCategory}</span>
-                    <span className="text-[#C9A66B] text-[11px] font-semibold">✦ Hand-Embellished</span>
+                    <span className="font-serif italic text-[#B03A63] font-semibold text-[11px] sm:text-xs">{item.subCategory}</span>
+                    <span className="text-[#C9A66B] text-[10px] sm:text-[11px] font-semibold">✦ Bespoke</span>
                   </div>
 
                   <h3
                     onClick={() => onSelectProduct(item)}
-                    className="font-serif text-xl font-bold hover:text-[#B03A63] cursor-pointer transition-colors mb-2 text-[#3A2A30]"
+                    className="font-serif text-sm sm:text-base font-bold hover:text-[#B03A63] cursor-pointer transition-colors mb-1.5 text-[#3A2A30] line-clamp-2"
                   >
                     {item.name}
                   </h3>
 
-                  <p className="text-xs text-[#3A2A30]/75 line-clamp-3 mb-4 leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-[#3A2A30]/75 line-clamp-2 mb-3 leading-relaxed">
                     {item.description}
                   </p>
 
-                  <div className="mt-auto pt-3 border-t border-[#F4B6C6]/40 flex items-center justify-between">
+                  <div className="mt-auto pt-2.5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div>
-                      <span className="text-[10px] text-[#3A2A30]/60 block uppercase font-semibold">Price</span>
-                      <span className="text-xs sm:text-sm font-semibold text-[#B03A63]">
-                        Price on request, DM to order
+                      <span className="text-[9px] text-[#3A2A30]/60 block uppercase font-semibold">Price</span>
+                      <span className="text-xs font-semibold text-[#B03A63]">
+                        Price on request, DM
                       </span>
                     </div>
 
@@ -190,10 +193,10 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 min-h-[40px] rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs"
+                      className="w-full sm:w-auto px-3 py-1.5 min-h-[44px] rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-all bg-[#B03A63] hover:bg-[#962B56] text-white shadow-xs"
                     >
                       <MessageCircle className="w-3.5 h-3.5" />
-                      <span>Order on WhatsApp</span>
+                      <span>Order</span>
                     </a>
                   </div>
                 </div>
@@ -202,17 +205,17 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
           </div>
         </div>
 
-        {/* Bridesmaids & Corsages Spotlight */}
-        <section className="mt-16 rounded-3xl p-6 sm:p-10 border border-[#F4B6C6] bg-gradient-to-r from-[#FBE4EA] via-white to-[#FBE4EA]/50 shadow-sm overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6">
+        {/* Bridesmaids & Corsages Spotlight: Stacks vertically on mobile */}
+        <section className="mt-12 sm:mt-16 rounded-3xl p-5 sm:p-8 lg:p-10 border border-[#F4B6C6] bg-gradient-to-r from-[#FBE4EA] via-white to-[#FBE4EA]/50 shadow-xs overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+            <div className="lg:col-span-6 text-center lg:text-left">
               <span className="text-xs uppercase font-bold tracking-widest text-[#B03A63]">
                 Bridal Squad &amp; Dholki
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold mt-1 mb-3 text-[#3A2A30]">
+              <h3 className="font-serif text-xl sm:text-3xl font-bold mt-1 mb-2 sm:mb-3 text-[#3A2A30]">
                 Matching Wrist Corsages &amp; Everlasting Gajras
               </h3>
-              <p className="text-sm text-[#3A2A30]/80 leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-[#3A2A30]/80 leading-relaxed mb-5">
                 Make your dholki and mayun pictures unforgettable with matching handmade flower bracelets for sisters and cousins. Custom tinted in dusty pink, blush ivory, or yellow marigold hues.
               </p>
               <a
@@ -221,7 +224,7 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-full text-xs font-semibold uppercase tracking-wider bg-[#25D366] hover:bg-[#20ba59] text-white shadow-sm transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] rounded-full text-xs font-semibold uppercase tracking-wider bg-[#25D366] hover:bg-[#20ba59] text-white shadow-xs transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Customize Squad Corsages on WhatsApp</span>
@@ -229,11 +232,14 @@ export const WeddingScreen: React.FC<WeddingScreenProps> = ({
             </div>
 
             <div className="lg:col-span-6 relative flex justify-center">
-              <div className="relative w-full max-w-md aspect-[16/10] sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-md border-2 border-white">
+              <div className="relative w-full max-w-md aspect-[16/10] sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-xs border-2 border-white">
                 <img
                   src="/assets/images/wedding/wrist-corsages.jpg"
                   alt="Mehndi Flower Bracelets and Wrist Corsages"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={448}
+                  height={336}
                 />
               </div>
             </div>
