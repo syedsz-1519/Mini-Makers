@@ -9,6 +9,17 @@
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'DM Sans', 'Poppins', system-ui, sans-serif;
     --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
+    --fab-size: 44px;
+    --fab-icon-size: 22px;
+    --fab-gap: 10px;
+  }
+
+  @media (min-width: 600px) {
+    :root {
+      --fab-size: 48px;
+      --fab-icon-size: 24px;
+      --fab-gap: 12px;
+    }
   }
 
   html {
@@ -298,3 +309,49 @@ textarea {
     animation: none !important;
   }
 }
+
+/* Floating Action Buttons System */
+.floating-fab-container {
+  gap: var(--fab-gap, 10px);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+}
+
+body.drawer-open .floating-fab-container,
+body.overlay-open .floating-fab-container,
+body.modal-open .floating-fab-container,
+.floating-fab-container.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(0.8) !important;
+}
+
+.fab-button {
+  width: var(--fab-size, 44px);
+  height: var(--fab-size, 44px);
+  min-width: var(--fab-size, 44px);
+  min-height: var(--fab-size, 44px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fab-icon {
+  width: var(--fab-icon-size, 22px);
+  height: var(--fab-icon-size, 22px);
+}
+
+@keyframes fab-subtle-pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 6px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.fab-subtle-pulse {
+  animation: fab-subtle-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+

@@ -65,6 +65,21 @@ export default function App() {
   ]);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [isNavDrawerOpen, setIsNavDrawerOpen] = useState<boolean>(false);
+
+  // Sync modal / overlay open class on body for smooth styling
+  useEffect(() => {
+    if (isCartOpen || isSearchOpen) {
+      document.body.classList.add('overlay-open');
+      return () => {
+        document.body.classList.remove('overlay-open');
+      };
+    } else {
+      document.body.classList.remove('overlay-open');
+    }
+  }, [isCartOpen, isSearchOpen]);
+
+  const isOverlayOpen = isNavDrawerOpen || isCartOpen || isSearchOpen;
 
   const handleNavigate = (screen: string) => {
     setCurrentScreen(screen);
@@ -105,6 +120,7 @@ export default function App() {
         cartCount={inquiryItems.reduce((acc, curr) => acc + curr.quantity, 0)}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenSearch={() => setIsSearchOpen(true)}
+        onDrawerOpenChange={setIsNavDrawerOpen}
       />
 
       {/* Main Content Area */}
@@ -190,7 +206,7 @@ export default function App() {
       />
 
       {/* Persistent Floating Dual Action Buttons (Instagram on top, WhatsApp on bottom) */}
-      <FloatingActionButtons />
+      <FloatingActionButtons isHidden={isOverlayOpen} />
 
       {/* Inquiry Cart Drawer */}
       <InquiryDrawer

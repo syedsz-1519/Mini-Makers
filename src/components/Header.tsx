@@ -19,6 +19,7 @@ interface HeaderProps {
   cartCount: number;
   onOpenCart: () => void;
   onOpenSearch: () => void;
+  onDrawerOpenChange?: (open: boolean) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -27,6 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
   cartCount,
   onOpenCart,
   onOpenSearch,
+  onDrawerOpenChange,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -43,16 +45,21 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'custom-order', label: 'Custom Request' },
   ];
 
-  // Lock body scroll when mobile navigation drawer is open
+  // Lock body scroll and sync drawer-open state when mobile navigation drawer is open
   useEffect(() => {
+    onDrawerOpenChange?.(mobileMenuOpen);
     if (mobileMenuOpen) {
+      document.body.classList.add('drawer-open');
       const originalStyle = window.getComputedStyle(document.body).overflow;
       document.body.style.overflow = 'hidden';
       return () => {
+        document.body.classList.remove('drawer-open');
         document.body.style.overflow = originalStyle;
       };
+    } else {
+      document.body.classList.remove('drawer-open');
     }
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, onDrawerOpenChange]);
 
   const handleNavClick = (screenId: string) => {
     onNavigate(screenId);

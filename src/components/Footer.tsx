@@ -300,8 +300,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Bar: pr-20 on mobile keeps the text completely clear of the 56px floating action buttons in the corner */}
-        <div className="mt-8 pt-5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-[#3A2A30]/75 text-center sm:text-left leading-relaxed pr-20 sm:pr-0">
+        {/* Bottom Bar: pr-[72px] on mobile keeps the text completely clear of the 44px floating action buttons in the corner */}
+        <div className="mt-8 pt-5 border-t border-[#F4B6C6]/40 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-[#3A2A30]/75 text-center sm:text-left leading-relaxed pr-[72px] sm:pr-0">
           <p className="max-w-[280px] xs:max-w-sm sm:max-w-none mx-auto sm:mx-0">
             © {new Date().getFullYear()} Mini Makers. Crafted with Love, Made for Memories.
           </p>
